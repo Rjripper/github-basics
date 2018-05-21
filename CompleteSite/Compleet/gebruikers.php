@@ -25,9 +25,16 @@ class Gebruikers extends DatabaseObject {
 
     public function full_name()
     {
-        if(isset($this->Gebruikers_Voornaam) && isset($this->Gebruikers_Tussenvoegsel) && isset($this->Gebruikers_Achternaam))
+        if(isset($this->Gebruikers_Voornaam) &&
+           isset($this->Gebruikers_Tussenvoegsel) &&
+           isset($this->Gebruikers_Achternaam))
         {
             return $this->Gebruikers_Voornaam . " " .$this->Gebruikers_Tussenvoegsel . " " . $this->Gebruikers_Achternaam;
+        }
+        else if(isset($this->Gebruikers_Voornaam) &&
+                isset($this->Gebruikers_Achternaam))
+        {
+            return $this->Gebruikers_Voornaam . " " . $this->Gebruikers_Achternaam;
         }
         else{
             return "";

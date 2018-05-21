@@ -17,7 +17,11 @@ if(!$session->is_logged_in())
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.11/css/all.css" integrity="sha384-p2jx59pefphTFIpeqCcISO9MdVfIm4pNnsL08A6v5vaQc4owkQqxMV8kg4Yvhaw/" crossorigin="anonymous">
+
+    <link rel="stylesheet" href="adresboekStyleGebruiker.css">
+
     <link rel="stylesheet" href="adresboekStyle.css">
+
     <script src="main.js"> </script>
     <title>Adresboek</title>
 
@@ -76,6 +80,8 @@ if(!$session->is_logged_in())
 
                 <br>
 
+
+
                 <table class="tableOpmaakLosseButtons">
                     <tr>
                         <th>
@@ -85,19 +91,46 @@ if(!$session->is_logged_in())
                     </tr>
                 </table>
 
+
                 <br>
 
                 <table class="tableOpmaakLosseButtons">
                     <tr>
                         <td>
 
+
+                            <button type="submit" name="loguit">
+                                <a href="loguit.php" >
+                                    <i class="fas fa-power-off"></i>
+                                    Uitloggen
+                                </a>
+                            </button>
+
                             <button type="submit" name="loguit"><a href="loguit.php" ><i class="fas fa-power-off"></i>Uitloggen</a></button>
+
                         </td>
                     </tr>
                 </table>
 
 
             </div>
+
+
+            <div id="mainListItemsRechts" class="inline-blocks">
+
+                <table border="1px" >
+                    <tr>
+                        <th>Naam</th>
+                        <th>Username</th>
+                        <th>E-mail</th>
+                        <th>Telefoonnummer</th>
+                    </tr>
+                    <?php foreach($gebruikers as $gebruiker): ?>
+                        <tr>
+                            <td><?php echo $gebruiker->full_name(); ?></td>
+                            <td><?php echo $gebruiker->Gebruikers_Gebruikersnaam; ?></td>
+                            <td><?php echo $gebruiker->Gebruikers_Email; ?></td>
+                            <td><?php echo $gebruiker->Gebruikers_Telefoonnummer; ?></td>
 
 
 
@@ -146,6 +179,7 @@ if(!$session->is_logged_in())
                             <td><?php echo $gebruiker->Gebruikers_Achternaam; ?></td>
                             <td><?php echo $gebruiker->Gebruikers_Email; ?></td>
                             <td><?php echo $gebruiker->Gebruikers_Rol; ?></td>
+
                         </tr>
                     <?php endforeach;
                     ?>
@@ -161,7 +195,10 @@ if(!$session->is_logged_in())
                 <li>Naam</li>
                 <li>Standplaats</li>
                 <li>Bedrijfsnaam</li>
+
+
                 <a href="add_Gebruiker.php"><li>Voeg gebruiker toe</li></a>
+
                 <a href="inlog.php"><li>Uitloggen</li></a>
             </ul>
         </div>
