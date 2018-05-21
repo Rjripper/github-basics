@@ -99,6 +99,11 @@ main
         height: auto;
        
     }
+
+    #mainForm
+    {
+        width: 120%;
+    }
 }
 
 /*
@@ -117,6 +122,11 @@ main
         width: 100%;
         height: auto;
 
+    }
+
+    #mainForm
+    {
+        width: 120%;
     }
 }
 
