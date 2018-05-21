@@ -31,40 +31,115 @@
 
 
         <div id="mainListItems" class="inline-blocks">
+            <div id="mainListItemsLinks" class="inline-blocks">
+                <!--VOEG TOE BUTTON -->
+                <table >
+                    <tr>
+                        <th>
+                            <img src="images/mainIcon.png" alt="profielfoto">
+                            Welkom terug, Casey!
+                        </th>
+                    </tr>
+                    <tr>
+                        <td>
+                            Sorteer op:
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <button type="button" ><a href="add_Gebruiker.php">Naam</a></button>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <button type="button"><a href="add_Gebruiker.php">Standplaats</a></button>
+                        </td>
+                    </tr>
+                    <tr>
+                        <th>
+                            <button type="button"><a href="add_Gebruiker.php">Bedrijfsnaam</a></button>
+                        </th>
+                    </tr>
+                </table>
 
-            <!--VOEG TOE BUTTON -->
-            <button type="button"><a href="add_Gebruiker.php">Voeg toe</a></button>
+                <br>
+
+                <table class="tableOpmaakLosseButtons">
+                    <tr>
+                        <th>
+
+                            <button type="button" ><a href="add_Gebruiker.php"><i class="fas fa-plus"></i>Voeg toe</a></button>
+                        </th>
+                    </tr>
+                </table>
+
+                <br>
+
+                <table class="tableOpmaakLosseButtons">
+                    <tr>
+                        <td>
+
+                            <button type="button"><a href="add_Gebruiker.php" ><i class="fas fa-power-off"></i>Uitloggen</a></button>
+                        </td>
+                    </tr>
+                </table>
 
 
-            <table border="1px">
-            <tr>
-                <th>Voornaam</th>
-                <th>tussenvoegsels</th>
-                <th>achternaam</th>
-                <th>email</th>
-                <th>telefoonnummer</th>
-                <th>gebruikersnaam</th>
-                <th>Wachtwoord</th>
-                <th>rol</th>
-                <td></td>
-                <td></td>
-            </tr>
-            <?php foreach($gebruikers as $gebruiker): ?>
+            </div>
+
+
+
+
+        <div id="mainListItemsRechts" class="inline-blocks">
+            <table border="1px" class="tableLaptop">
                 <tr>
-                    <td><?php echo $gebruiker->Gebruikers_Voornaam; ?></td>
-                    <td><?php echo $gebruiker->Gebruikers_Tussenvoegsel; ?></td>
-                    <td><?php echo $gebruiker->Gebruikers_Achternaam; ?></td>
-                    <td><?php echo $gebruiker->Gebruikers_Email; ?></td>
-                    <td><?php echo $gebruiker->Gebruikers_Telefoonnummer; ?></td>
-                    <td><?php echo $gebruiker->Gebruikers_Gebruikersnaam; ?></td>
-                    <td><?php echo $gebruiker->Gebruikers_Wachtwoord; ?></td>
-                    <td><?php echo $gebruiker->Gebruikers_Rol; ?></td>
-                    <td><a href="edit_Gebruiker.php?id=<?php echo "$gebruiker->Gebruikers_ID"; ?>"><i class="fas fa-edit"></i></a></td>
-                    <td><a href="delete_Gebruiker.php?id=<?php echo "$gebruiker->Gebruikers_ID"; ?>"><i class="fas fa-times"></i></a></td>
+                    <th>Voornaam</th>
+                    <th>tussenvoegsels</th>
+                    <th>achternaam</th>
+                    <th>email</th>
+                    <th>telefoonnummer</th>
+                    <th>gebruikersnaam</th>
+                    <th>Wachtwoord</th>
+                    <th>rol</th>
+                    <td></td>
+                    <td></td>
                 </tr>
-            <?php endforeach;
-            ?>
-        </table>
+                <?php foreach($gebruikers as $gebruiker): ?>
+                    <tr>
+                        <td><?php echo $gebruiker->Gebruikers_Voornaam; ?></td>
+                        <td><?php echo $gebruiker->Gebruikers_Tussenvoegsel; ?></td>
+                        <td><?php echo $gebruiker->Gebruikers_Achternaam; ?></td>
+                        <td><?php echo $gebruiker->Gebruikers_Email; ?></td>
+                        <td><?php echo $gebruiker->Gebruikers_Telefoonnummer; ?></td>
+                        <td><?php echo $gebruiker->Gebruikers_Gebruikersnaam; ?></td>
+                        <td><?php echo $gebruiker->Gebruikers_Wachtwoord; ?></td>
+                        <td><?php echo $gebruiker->Gebruikers_Rol; ?></td>
+                        <td><a href="edit_Gebruiker.php?id=<?php echo "$gebruiker->Gebruikers_ID"; ?>"><i class="fas fa-edit"></i></a></td>
+                        <td><a href="delete_Gebruiker.php?id=<?php echo "$gebruiker->Gebruikers_ID"; ?>"><i class="fas fa-times"></i></a></td>
+                    </tr>
+                <?php endforeach;
+                ?>
+            </table>
+
+            <table border="1px" class="tableTabletEnMobiel">
+                <tr>
+                    <th>Voornaam</th>
+                    <th>achternaam</th>
+                    <th>email</th>
+                    <th>rol</th>
+                </tr>
+                <?php foreach($gebruikers as $gebruiker): ?>
+                    <tr>
+                        <td><?php echo $gebruiker->Gebruikers_Voornaam; ?></td>
+                        <td><?php echo $gebruiker->Gebruikers_Achternaam; ?></td>
+                        <td><?php echo $gebruiker->Gebruikers_Email; ?></td>
+                        <td><?php echo $gebruiker->Gebruikers_Rol; ?></td>
+                    </tr>
+                <?php endforeach;
+                ?>
+            </table>
+        </div>
+
         </div>
         <div id="mainSideBar" class="inline-blocks">
             <h1>Sorteer op:</h1>
@@ -74,8 +149,8 @@
                 <li>Naam</li>
                 <li>Standplaats</li>
                 <li>Bedrijfsnaam</li>
-                <li>Voeg gebruiker toe</li>
-                <li>Uitloggen</li>
+                <a href="add_Gebruiker.php"><li>Voeg gebruiker toe</li></a>
+                <a href="inlog.php"><li>Uitloggen</li></a>
             </ul>
         </div>
 

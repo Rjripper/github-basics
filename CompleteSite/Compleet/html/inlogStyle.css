@@ -19,7 +19,7 @@ body
     line-height: 1.2em;
     font-size: 100%;
     background: url(images/BackgroundImage.png);
-    background-repeat: none;
+
 }
 
 #container
@@ -52,6 +52,34 @@ main
     height: auto;
     text-align: center;
 }
+
+
+#mainForm input
+{
+    width: 15%;
+    -webkit-border-radius: 5px;
+    -moz-border-radius: 5px;
+    border-radius: 5px;
+    border: none;
+    padding: 10px 10px 10px 10px;
+    margin: 5px 0px 5px 0px;
+
+}
+
+.classSubmit
+{
+    background: #000082;
+    color: #ffffff;
+
+}
+
+.classUseEnPass
+{
+    background-color: #ffffff;
+    color: #000081;
+
+}
+
 
 /*
     Tablet
