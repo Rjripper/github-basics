@@ -11,7 +11,7 @@ class MYSQLDatabase{
 
     public function open_conection()
     {
-        $this->connection = mysqli_connect("localhost" , "root" , "" , "lidel_people");
+        $this->connection = mysqli_connect("localhost" , "root" , "" , "lidl_people");
         if(mysqli_connect_errno())
         {
             die(

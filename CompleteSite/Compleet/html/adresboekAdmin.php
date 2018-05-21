@@ -54,6 +54,7 @@ if(!$session->is_logged_in())
                         <th>
                             <img src="images/mainIcon.png" alt="profielfoto">
                             Welkom terug, <?php  echo $dezeGebruiker->Gebruikers_Voornaam; ?>!
+
                         </th>
                     </tr>
                     <tr>
@@ -99,6 +100,33 @@ if(!$session->is_logged_in())
                         </td>
                     </tr>
                 </table>
+                            <button type="button"><a href="add_Gebruiker.php">Bedrijfsnaam</a></button>
+                        </th>
+                    </tr>
+                </table>
+
+                <br>
+
+                <table class="tableOpmaakLosseButtons">
+                    <tr>
+                        <th>
+
+                            <button type="button" ><a href="add_Gebruiker.php"><i class="fas fa-plus"></i>Voeg toe</a></button>
+                        </th>
+                    </tr>
+                </table>
+
+                <br>
+
+                <table class="tableOpmaakLosseButtons">
+                    <tr>
+                        <td>
+
+                            <button type="button"><a href="add_Gebruiker.php" ><i class="fas fa-power-off"></i>Uitloggen</a></button>
+                        </td>
+                    </tr>
+                </table>
+
 
 
             </div>
@@ -108,6 +136,7 @@ if(!$session->is_logged_in())
 
         <div id="mainListItemsRechts" class="inline-blocks">
             <table border="1px" class="tableLaptop">
+
                 <tr>
                     <th>Voornaam</th>
                     <th>tussenvoegsels</th>
@@ -119,6 +148,41 @@ if(!$session->is_logged_in())
                     <th>rol</th>
                     <td></td>
                     <td></td>
+                <tr>
+                    <th>Voornaam</th>
+                    <th>tussenvoegsels</th>
+                    <th>achternaam</th>
+                    <th>email</th>
+                    <th>telefoonnummer</th>
+                    <th>gebruikersnaam</th>
+                    <th>Wachtwoord</th>
+                    <th>rol</th>
+                    <td></td>
+                    <td></td>
+                </tr>
+                <?php foreach($gebruikers as $gebruiker): ?>
+                    <tr>
+                        <td><?php echo $gebruiker->Gebruikers_Voornaam; ?></td>
+                        <td><?php echo $gebruiker->Gebruikers_Tussenvoegsel; ?></td>
+                        <td><?php echo $gebruiker->Gebruikers_Achternaam; ?></td>
+                        <td><?php echo $gebruiker->Gebruikers_Email; ?></td>
+                        <td><?php echo $gebruiker->Gebruikers_Telefoonnummer; ?></td>
+                        <td><?php echo $gebruiker->Gebruikers_Gebruikersnaam; ?></td>
+                        <td><?php echo $gebruiker->Gebruikers_Wachtwoord; ?></td>
+                        <td><?php echo $gebruiker->Gebruikers_Rol; ?></td>
+                        <td><a href="edit_Gebruiker.php?id=<?php echo "$gebruiker->Gebruikers_ID"; ?>"><i class="fas fa-edit"></i></a></td>
+                        <td><a href="delete_Gebruiker.php?id=<?php echo "$gebruiker->Gebruikers_ID"; ?>"><i class="fas fa-times"></i></a></td>
+                    </tr>
+                <?php endforeach;
+                ?>
+            </table>
+
+            <table border="1px" class="tableTabletEnMobiel">
+                <tr>
+                    <th>Voornaam</th>
+                    <th>achternaam</th>
+                    <th>email</th>
+                    <th>rol</th>
                 </tr>
                 <?php foreach($gebruikers as $gebruiker): ?>
                     <tr>
