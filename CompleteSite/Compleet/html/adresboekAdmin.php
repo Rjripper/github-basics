@@ -2,13 +2,14 @@
 $session = new Session();
 
 $message = "";
+
 if(!$session->is_logged_in())
 {
     session_destroy();
     redirect_to("inlog.php");
 } else{
     if(!$_SESSION['user_rol'] == "admin" || !$_SESSION['user_rol'] == "Admin"){
-
+        redirect_to("adresboek.php");
     }
 
 }
@@ -96,32 +97,6 @@ if(!$session->is_logged_in())
                     <tr>
                         <td>
 
-                            <button type="submit" name="loguit"><a href="loguit.php" ><i class="fas fa-power-off"></i>Uitloggen</a></button>
-                        </td>
-                    </tr>
-                </table>
-                            <button type="button"><a href="add_Gebruiker.php">Bedrijfsnaam</a></button>
-                        </th>
-                    </tr>
-                </table>
-
-                <br>
-
-                <table class="tableOpmaakLosseButtons">
-                    <tr>
-                        <th>
-
-                            <button type="button" ><a href="add_Gebruiker.php"><i class="fas fa-plus"></i>Voeg toe</a></button>
-                        </th>
-                    </tr>
-                </table>
-
-                <br>
-
-                <table class="tableOpmaakLosseButtons">
-                    <tr>
-                        <td>
-
                             <button type="button"><a href="add_Gebruiker.php" ><i class="fas fa-power-off"></i>Uitloggen</a></button>
                         </td>
                     </tr>
@@ -148,42 +123,6 @@ if(!$session->is_logged_in())
                     <th>rol</th>
                     <td></td>
                     <td></td>
-                <tr>
-                    <th>Voornaam</th>
-                    <th>tussenvoegsels</th>
-                    <th>achternaam</th>
-                    <th>email</th>
-                    <th>telefoonnummer</th>
-                    <th>gebruikersnaam</th>
-                    <th>Wachtwoord</th>
-                    <th>rol</th>
-                    <td></td>
-                    <td></td>
-                </tr>
-                <?php foreach($gebruikers as $gebruiker): ?>
-                    <tr>
-                        <td><?php echo $gebruiker->Gebruikers_Voornaam; ?></td>
-                        <td><?php echo $gebruiker->Gebruikers_Tussenvoegsel; ?></td>
-                        <td><?php echo $gebruiker->Gebruikers_Achternaam; ?></td>
-                        <td><?php echo $gebruiker->Gebruikers_Email; ?></td>
-                        <td><?php echo $gebruiker->Gebruikers_Telefoonnummer; ?></td>
-                        <td><?php echo $gebruiker->Gebruikers_Gebruikersnaam; ?></td>
-                        <td><?php echo $gebruiker->Gebruikers_Wachtwoord; ?></td>
-                        <td><?php echo $gebruiker->Gebruikers_Rol; ?></td>
-                        <td><a href="edit_Gebruiker.php?id=<?php echo "$gebruiker->Gebruikers_ID"; ?>"><i class="fas fa-edit"></i></a></td>
-                        <td><a href="delete_Gebruiker.php?id=<?php echo "$gebruiker->Gebruikers_ID"; ?>"><i class="fas fa-times"></i></a></td>
-                    </tr>
-                <?php endforeach;
-                ?>
-            </table>
-
-            <table border="1px" class="tableTabletEnMobiel">
-                <tr>
-                    <th>Voornaam</th>
-                    <th>achternaam</th>
-                    <th>email</th>
-                    <th>rol</th>
-                </tr>
                 <?php foreach($gebruikers as $gebruiker): ?>
                     <tr>
                         <td><?php echo $gebruiker->Gebruikers_Voornaam; ?></td>
@@ -230,7 +169,7 @@ if(!$session->is_logged_in())
                 <li>Standplaats</li>
                 <li>Bedrijfsnaam</li>
                 <a href="add_Gebruiker.php"><li>Voeg gebruiker toe</li></a>
-                <a href="inlog.php"><li>Uitloggen</li></a>
+                <a href="loguit.php"><li>Uitloggen</li></a>
             </ul>
         </div>
 
