@@ -25,9 +25,16 @@ class Gebruikers extends DatabaseObject {
 
     public function full_name()
     {
-        if(isset($this->Gebruikers_Voornaam) && isset($this->Gebruikers_Tussenvoegsel) && isset($this->Gebruikers_Achternaam))
+        if(isset($this->Gebruikers_Voornaam) &&
+           isset($this->Gebruikers_Tussenvoegsel) &&
+           isset($this->Gebruikers_Achternaam))
         {
             return $this->Gebruikers_Voornaam . " " .$this->Gebruikers_Tussenvoegsel . " " . $this->Gebruikers_Achternaam;
+        }
+        else if(isset($this->Gebruikers_Voornaam) &&
+                isset($this->Gebruikers_Achternaam))
+        {
+            return $this->Gebruikers_Voornaam . " " . $this->Gebruikers_Achternaam;
         }
         else{
             return "";
@@ -47,98 +54,45 @@ class Gebruikers extends DatabaseObject {
         return !empty($result_array) ? array_shift($result_array) : false;
     }
 
-    public function make($Gebruikers_Voornaam,
-                                $Gebruikers_Tussenvoegsel,
-                                $Gebruikers_Achternaam,
-                                $Gebruikers_Email,
-                                $Gebruikers_Telefoonnummer,
-                                $Gebruikers_Gebruikersnaam,
-                                $Gebruikers_Wachtwoord,
-                                $Gebruikers_Rol){
+    public function make($array){
 
         global $database;
-        if(!empty($Gebruikers_Voornaam) &&
-            !empty($Gebruikers_Achternaam) &&
-            !empty($Gebruikers_Email) &&
-            !empty($Gebruikers_Telefoonnummer) &&
-            !empty($Gebruikers_Gebruikersnaam) &&
-            !empty($Gebruikers_Wachtwoord) &&
-            !empty($Gebruikers_Rol)) {
 
-
-            if(!empty($Gebruikers_Tussenvoegsel)){
-
-                $sql = "INSERT INTO ";
-                $sql .=  'gebruikers (Gebruikers_Voornaam, Gebruikers_Tussenvoegsel, Gebruikers_Achternaam, ';
-                $sql .= 'Gebruikers_Email, Gebruikers_Telefoonnummer, Gebruikers_Gebruikersnaam, Gebruikers_Wachtwoord, Gebruikers_Rol) ';
-                $sql .= 'VALUES ('. " '". $Gebruikers_Voornaam. "' , ". " '". $Gebruikers_Tussenvoegsel. "',".  " '". $Gebruikers_Achternaam. "' , ". " '". $Gebruikers_Email . "' , ". " '". $Gebruikers_Telefoonnummer. "' ,";
-                $sql .=  " '". $Gebruikers_Gebruikersnaam . "' , ". " '". $Gebruikers_Wachtwoord. "' , "." '". $Gebruikers_Rol ."' )";
-
-            }else{
-                $sql = "INSERT INTO ";
-                $sql .=  'gebruikers (Gebruikers_Voornaam, Gebruikers_Achternaam, ';
-                $sql .= 'Gebruikers_Email, Gebruikers_Telefoonnummer, Gebruikers_Gebruikersnaam, Gebruikers_Wachtwoord, Gebruikers_Rol) ';
-                $sql .= 'VALUES ('. " '". $Gebruikers_Voornaam. "' , ". " '". $Gebruikers_Achternaam. "' , ". " '". $Gebruikers_Email . "' , ". " '". $Gebruikers_Telefoonnummer. "' ,";
-                $sql .=  " '". $Gebruikers_Gebruikersnaam . "' , ". " '". $Gebruikers_Wachtwoord. "' , "." '". $Gebruikers_Rol ."' )";
-
-            }
-            $database->query($sql);
-            return ($database->affected_rows() ==1) ? true : false;
-        } else {
-            return false;
+        if(!empty($array['tnaam'])){
+            $sql = "INSERT INTO ";
+            $sql .=  'gebruikers (Gebruikers_Voornaam, Gebruikers_Tussenvoegsel, Gebruikers_Achternaam, ';
+            $sql .= 'Gebruikers_Email, Gebruikers_Telefoonnummer, Gebruikers_Gebruikersnaam, Gebruikers_Wachtwoord, Gebruikers_Rol) ';
+            $sql .= 'VALUES ('. " '". $database->escape_value($array['vnaam']) . "' , ". " '". $database->escape_value($array['tnaam']) . "',".  " '". $database->escape_value($array['anaam']) . "' , ". " '". $database->escape_value($array['email']) . "' , ". " '". $database->escape_value($array['telnummer']) . "' ,";
+            $sql .=  " '". $database->escape_value($array['gnaam']) . "' , ". " '". $database->escape_value($array['wachtwoord']) . "' , "." '". $database->escape_value($array['rol']) ."' )";
+        } else{
+            $sql = "INSERT INTO ";
+            $sql .=  'gebruikers (Gebruikers_Voornaam, Gebruikers_Achternaam, ';
+            $sql .= 'Gebruikers_Email, Gebruikers_Telefoonnummer, Gebruikers_Gebruikersnaam, Gebruikers_Wachtwoord, Gebruikers_Rol) ';
+            $sql .= 'VALUES ('. " '". $database->escape_value($array['vnaam']) . "' , ". " '". $database->escape_value($array['anaam']) . "' , ". " '". $database->escape_value($array['email'])  . "' , ". " '". $database->escape_value($array['telnummer']) . "' ,";
+            $sql .=  " '". $database->escape_value($array['gnaam']) . "' , ". " '". $database->escape_value($array['wachtwoord']) . "' , "." '". $database->escape_value($array['rol']) ."' )";
         }
+        $database->query($sql);
+        return ($database->affected_rows() ==1) ? true : false;
     }
 
-    public function edit ($Gebruikers_Voornaam,
-                         $Gebruikers_Tussenvoegsel,
-                         $Gebruikers_Achternaam,
-                         $Gebruikers_Email,
-                         $Gebruikers_Telefoonnummer,
-                         $Gebruikers_Gebruikersnaam,
-                         $Gebruikers_Wachtwoord,
-                         $Gebruikers_Rol){
+    public function edit($array){
 
         global $database;
-        if(!empty($Gebruikers_Voornaam) &&
-            !empty($Gebruikers_Achternaam) &&
-            !empty($Gebruikers_Email) &&
-            !empty($Gebruikers_Telefoonnummer) &&
-            !empty($Gebruikers_Gebruikersnaam) &&
-            !empty($Gebruikers_Wachtwoord) &&
-            !empty($Gebruikers_Rol)) {
 
-            if(!empty($Gebruikers_Tussenvoegsel)){
-                $sql = "UPDATE ";
-                $sql .=  'gebruikers SET Gebruikers_Voornaam = '. " '". $Gebruikers_Voornaam. "' , ";
-                $sql .=  'Gebruikers_Tussenvoegsel = '." '". $Gebruikers_Tussenvoegsel. "' , ";
-                $sql .=  'Gebruikers_Achternaam = '." '". $Gebruikers_Achternaam. "' , ";
-                $sql .=  'Gebruikers_Email = '." '". $Gebruikers_Email. "' , ";
-                $sql .=  'Gebruikers_Telefoonnummer = '." '". $Gebruikers_Telefoonnummer. "' , ";
-                $sql .=  'Gebruikers_Gebruikersnaam = '." '". $Gebruikers_Gebruikersnaam. "' , ";
-                $sql .=  'Gebruikers_Wachtwoord = '." '". $Gebruikers_Wachtwoord. "' , ";
-                $sql .=  'Gebruikers_Rol = '." '". $Gebruikers_Rol. "' ";
-                $sql .=  'WHERE gebruikers_ID = '." '". $this->Gebruikers_ID. "'";
+        $sql = "UPDATE ";
+        $sql .=  'gebruikers SET Gebruikers_Voornaam = '. " '". $database->escape_value($array['vnaam']) . "' , ";
+        empty($database->escape_value($array['tnaam'])) ?
+            $sql .=  'Gebruikers_Tussenvoegsel = '." '". " ". "' , " : $sql .=  'Gebruikers_Tussenvoegsel = '." '". $database->escape_value($array['tnaam']) . "' , ";
+        $sql .=  'Gebruikers_Achternaam = '." '". $database->escape_value($array['anaam']) . "' , ";
+        $sql .=  'Gebruikers_Email = '." '". $database->escape_value($array['email']) . "' , ";
+        $sql .=  'Gebruikers_Telefoonnummer = '." '". $database->escape_value($array['telnummer']) . "' , ";
+        $sql .=  'Gebruikers_Gebruikersnaam = '." '". $database->escape_value($array['gnaam']) . "' , ";
+        $sql .=  'Gebruikers_Wachtwoord = '." '". $database->escape_value($array['wachtwoord']) . "' , ";
+        $sql .=  'Gebruikers_Rol = '." '". $database->escape_value($array['rol']) . "' ";
+        $sql .=  'WHERE gebruikers_ID = '." '". $this->Gebruikers_ID. "'";
 
-            } else{
-                $sql = "UPDATE ";
-                $sql .=  'gebruikers SET Gebruikers_Voornaam = '. " '". $Gebruikers_Voornaam. "' , ";
-                $sql .=  'Gebruikers_Tussenvoegsel = '." '". " ". "' , ";
-                $sql .=  'Gebruikers_Achternaam = '." '". $Gebruikers_Achternaam. "' , ";
-                $sql .=  'Gebruikers_Email = '." '". $Gebruikers_Email. "' , ";
-                $sql .=  'Gebruikers_Telefoonnummer = '." '". $Gebruikers_Telefoonnummer. "' , ";
-                $sql .=  'Gebruikers_Gebruikersnaam = '." '". $Gebruikers_Gebruikersnaam. "' , ";
-                $sql .=  'Gebruikers_Wachtwoord = '." '". $Gebruikers_Wachtwoord. "' , ";
-                $sql .=  'Gebruikers_Rol = '." '". $Gebruikers_Rol. "' ";
-                $sql .=  'WHERE gebruikers_ID = '." '". $this->Gebruikers_ID. "'";
-
-            }
-
-            $database->query($sql);
-            return ($database->affected_rows() ==1) ? true : false;
-        } else {
-            return false;
-        }
+        $database->query($sql);
+        return ($database->affected_rows() ==1) ? true : false;
     }
-
 }
 ?>

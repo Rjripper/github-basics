@@ -135,6 +135,7 @@ class DatabaseObject {
 
     public function delete(){
         global $database;
+
         $sql = "DELETE FROM ".static::$table_name." WHERE Gebruikers_ID = ". $database->escape_value($this->Gebruikers_ID) . " LIMIT 1";
         $database->query($sql);
 

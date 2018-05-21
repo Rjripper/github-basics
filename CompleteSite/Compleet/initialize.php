@@ -35,3 +35,4 @@ require_once (LIB_PATH.DS.'functions.php');
 
 //LOAD DATABAS-RELATED CLASSES
 require_once (LIB_PATH.DS.'gebruikers.php');
+require_once (LIB_PATH.DS.'session.php');
