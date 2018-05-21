@@ -93,30 +93,16 @@ main
     text-align: left;
 }
 
-
-#mainListItemsLinks td
-{
-    border: 1px solid black;
-    border-collapse: collapse;
-}
-
-#mainListItemsRechts
-{
-    width: 69.5%;
-    height: auto;
-}
-
 #mainListItemsLinks table
 {
     border: 1px solid black;
     border-collapse: collapse;
 }
 
-.tableOpmaakLosseButtons
+#mainListItemsLinks td
 {
-    max-width: 257px;
-    width: 100%;
-    height: auto;
+    border: 1px solid black;
+    border-collapse: collapse;
 }
 
 #mainListItemsLinks table td,tr,th
@@ -128,7 +114,26 @@ main
 #mainListItemsLinks img
 {
     width: 15%;
-    heigt: 15%;
+    heigth: 15%;
+}
+
+#mainListItemsLinks a
+{
+    display: block;
+    text-decoration: none;
+}
+
+#mainListItemsRechts
+{
+    width: 69.5%;
+    height: auto;
+}
+
+.tableOpmaakLosseButtons
+{
+    max-width: 257px;
+    width: 100%;
+    height: auto;
 }
 
 #mainListItemsRechts table
@@ -137,11 +142,7 @@ main
     border-collapse: collapse;
 }
 
-#mainListItemsLinks a
-{
-    display: block;
-    text-decoration: none;
-}
+
 
 .fa-power-off, .fa-plus
 {
@@ -179,6 +180,7 @@ main
     text-decoration: none;
     color: #f1f1f1;
 }
+
 /*
     Footer, divs en opmaak
 */

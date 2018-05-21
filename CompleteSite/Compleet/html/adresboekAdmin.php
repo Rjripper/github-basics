@@ -8,10 +8,10 @@ if(!$session->is_logged_in())
     session_destroy();
     redirect_to("inlog.php");
 } else{
-    if(!$_SESSION['user_rol'] == "admin" || !$_SESSION['user_rol'] == "Admin"){
+    if($_SESSION['user_rol'] == "gebruiker" || $_SESSION['user_rol'] == "Gebruiker"){
+        print_r($_SESSION);
         redirect_to("adresboek.php");
     }
-
 }
 
 ?>
@@ -49,7 +49,7 @@ if(!$session->is_logged_in())
 
         <div id="mainListItems" class="inline-blocks">
             <div id="mainListItemsLinks" class="inline-blocks">
-                <!--VOEG TOE BUTTON -->
+                <!-- Linker Menu -->
                 <table >
                     <tr>
                         <th>
@@ -97,7 +97,7 @@ if(!$session->is_logged_in())
                     <tr>
                         <td>
 
-                            <button type="button"><a href="add_Gebruiker.php" ><i class="fas fa-power-off"></i>Uitloggen</a></button>
+                            <button type="button"><a href="loguit.php" ><i class="fas fa-power-off"></i>Uitloggen</a></button>
                         </td>
                     </tr>
                 </table>
@@ -107,7 +107,7 @@ if(!$session->is_logged_in())
             </div>
 
 
-
+            <!-- Tabel users etc... -->
 
         <div id="mainListItemsRechts" class="inline-blocks">
             <table border="1px" class="tableLaptop">
