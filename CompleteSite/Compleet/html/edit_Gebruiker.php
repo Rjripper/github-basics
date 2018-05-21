@@ -24,6 +24,11 @@
         }
     }
 
+    if (isset($_POST['back']))
+    {
+        redirect_to("adresboekAdmin.php");
+    }
+
     ?>
 </head>
 <body>
@@ -54,6 +59,7 @@
                 Rol : <input type="text" name="rol" value="<?php echo $gebruiker->Gebruikers_Rol; ?>"><br>
 
                 <input type="submit" name="submit" value="Opslaan">
+                <input type="submit" name="back" value="Terug">
             </form>
 
 

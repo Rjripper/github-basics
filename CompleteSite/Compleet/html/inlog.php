@@ -48,9 +48,9 @@ if(isset($_POST['submit']))
     <div id="main">
         <div id="mainForm">
             <form action="" method="post">
-                <input type="text" name="firstname" placeholder="Username"><br>
-                <input type="password" name="lastname" placeholder="Password"><br>
-                <input type="submit" name="submit" value="Login"><br>
+                <input type="text" name="firstname" placeholder="Username" class="classUseEnPass"><br>
+                <input type="password" name="lastname" placeholder="Password" class="classUseEnPass"><br>
+                <input type="submit" name="submit" value="Login" class="classSubmit"><br>
             </form>
         </div>
 
