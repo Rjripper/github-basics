@@ -92,8 +92,6 @@ if(!$session->is_logged_in())
                         </td>
                     </tr>
                 </table>
-
-
             </div>
 
             <div id="mainListItemsRechts" class="inline-blocks">
