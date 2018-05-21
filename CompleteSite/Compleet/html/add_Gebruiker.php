@@ -15,12 +15,11 @@
 
         $gebruiker = new Gebruikers();
 
-        if($gebruiker->make($_POST['vnaam'] ,$_POST['tnaam'] ,$_POST['anaam'] ,$_POST['email'] ,$_POST['telnummer'] ,$_POST['gnaam'] ,$_POST['wachtwoord'] ,$_POST['rol'])){
+        if($gebruiker->make($_POST)){
             redirect_to("adresboekAdmin.php");
         } else{
-            echo "Iets is niet goed";
+            echo 'Iets is niet goed';
         }
-
 
     }
 
