@@ -75,8 +75,82 @@ main
 
 #mainListItems
 {
-    width: 60%;
+    width: 100%;
     height: auto;    
+}
+
+#mainListItemsLinks
+{
+    width: 30%;
+    height: auto;
+}
+
+#mainListItemsLinks button
+{
+    width: 100%;
+    border: none;
+    background: none;
+    text-align: left;
+}
+
+
+#mainListItemsLinks td
+{
+    border: 1px solid black;
+    border-collapse: collapse;
+}
+
+#mainListItemsRechts
+{
+    width: 69.5%;
+    height: auto;
+}
+
+#mainListItemsLinks table
+{
+    border: 1px solid black;
+    border-collapse: collapse;
+}
+
+.tableOpmaakLosseButtons
+{
+    max-width: 293px;
+    width: 70%;
+    height: auto;
+}
+
+#mainListItemsLinks table td,tr,th
+{
+    border: 1px solid black;
+
+}
+
+#mainListItemsLinks img
+{
+    width: 15%;
+    heigt: 15%;
+}
+
+#mainListItemsRechts table
+{
+    height: auto;
+    border-collapse: collapse;
+}
+
+#mainListItemsLinks a
+{
+    display: block;
+    text-decoration: none;
+}
+
+.fa-power-off, .fa-plus
+{
+    margin-right: 10px;
+}
+
+.tableTabletEnMobiel
+{
+    display:none;
 }
 
 #mainListItems li
@@ -96,10 +170,17 @@ main
     display: none;
 }
 
+
 #mainSideBar li
 {
     list-style: none;
     font-size: 100%;
+}
+
+#mainSideBar a
+{
+    text-decoration: none;
+    color: #f1f1f1;
 }
 /*
     Footer, divs en opmaak
@@ -132,6 +213,37 @@ footer
        
     }
 
+    #mainListItems
+    {
+        width: 60.15%;
+        height: auto;
+    }
+
+    #mainListItemsLinks
+    {
+        display: none;
+    }
+
+
+    .tableLaptop
+    {
+        display: none;
+    }
+
+    .tableTabletEnMobiel
+    {
+        display: inline-block;
+
+        border-collapse: collapse;
+    }
+
+    #mainListItemsRechts
+    {
+        width: 100%;
+        height: auto;
+        font-size: 80%;
+    }
+
     #headerButton
     {
         display: inline-block;    
@@ -141,6 +253,7 @@ footer
     
     #mainSideBar
     {
+        width: 40%;
         display: inline-block;
     }
     
@@ -172,7 +285,36 @@ footer
 
     }
 
-    
+    #mainListItems
+    {
+        width: 60.15%;
+        height: auto;
+    }
+
+    #mainListItemsLinks
+    {
+        display: none;
+    }
+
+    .tableLaptop
+    {
+        display: none;
+    }
+
+    .tableTabletEnMobiel
+    {
+        display: inline-block;
+
+
+    }
+
+
+    #mainListItemsRechts
+    {
+        width: 100%;
+        height: auto;
+        font-size: 70%;
+    }
 
     #headerButton
     {
@@ -185,7 +327,9 @@ footer
     #mainSideBar
     {       
         display: inline-block;
+        width: 40%;
         right: -200px;
+
     }
 
     #mainSideBar h1
@@ -197,4 +341,5 @@ footer
         font-size: 100%;
     }
 }
+
 

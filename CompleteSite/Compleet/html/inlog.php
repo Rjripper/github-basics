@@ -1,5 +1,17 @@
 <?php
 require_once ("../initialize.php");
+
+$message = "";
+
+if($session->is_logged_in())
+{
+    if(!$_SESSION['user_rol'] == "admin" || !$_SESSION['user_rol'] == "Admin"){
+        redirect_to("adresboekAdmin.php");
+    } else{
+        redirect_to("adresboek.php");
+    }
+}
+
 ?>
 
 <!DOCTYPE html>
@@ -22,10 +34,12 @@ if(isset($_POST['submit']))
     if($found_user)
     {
         if($found_user->Gebruikers_Rol == "admin" || $found_user->Gebruikers_Rol == "Admin"){
+            $session->login($found_user);
             redirect_to("adresboekAdmin.php");
         }
         else{
-            redirect_to("adresboek.html");
+            $session->login($found_user);
+            redirect_to("adresboek.php");
         }
 
     } else{
@@ -48,9 +62,9 @@ if(isset($_POST['submit']))
     <div id="main">
         <div id="mainForm">
             <form action="" method="post">
-                <input type="text" name="firstname" placeholder="Username"><br>
-                <input type="password" name="lastname" placeholder="Password"><br>
-                <input type="submit" name="submit" value="Login"><br>
+                <input type="text" name="firstname" placeholder="Username" class="classUseEnPass"><br>
+                <input type="password" name="lastname" placeholder="Password" class="classUseEnPass"><br>
+                <input type="submit" name="submit" value="Login" class="classSubmit"><br>
             </form>
         </div>
 

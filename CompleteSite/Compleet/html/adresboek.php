@@ -2,15 +2,11 @@
 $session = new Session();
 
 $message = "";
+
 if(!$session->is_logged_in())
 {
     session_destroy();
     redirect_to("inlog.php");
-} else{
-    if(!$_SESSION['user_rol'] == "admin" || !$_SESSION['user_rol'] == "Admin"){
-
-    }
-
 }
 
 ?>
@@ -25,13 +21,13 @@ if(!$session->is_logged_in())
     <script src="main.js"> </script>
     <title>Adresboek</title>
 
-<?php
-//    $sql = "SELECT * FROM gebruikers";
-//    $sql .= "LIMIT {$per_page} ";
-//    $sql .= "OFFSET {$pagintion->offset()}"; KOMT NOG
+    <?php
+    //    $sql = "SELECT * FROM gebruikers";
+    //    $sql .= "LIMIT {$per_page} ";
+    //    $sql .= "OFFSET {$pagintion->offset()}"; KOMT NOG
     $gebruikers = Gebruikers::find_all();
     $dezeGebruiker = Gebruikers::find_by_id($_SESSION['user_id'])
- ?>
+    ?>
 </head>
 <body>
 <div id="container" class="container-inline-blocks">
@@ -106,55 +102,55 @@ if(!$session->is_logged_in())
 
 
 
-        <div id="mainListItemsRechts" class="inline-blocks">
-            <table border="1px" class="tableLaptop">
-                <tr>
-                    <th>Voornaam</th>
-                    <th>tussenvoegsels</th>
-                    <th>achternaam</th>
-                    <th>email</th>
-                    <th>telefoonnummer</th>
-                    <th>gebruikersnaam</th>
-                    <th>Wachtwoord</th>
-                    <th>rol</th>
-                    <td></td>
-                    <td></td>
-                </tr>
-                <?php foreach($gebruikers as $gebruiker): ?>
+            <div id="mainListItemsRechts" class="inline-blocks">
+                <table border="1px" class="tableLaptop">
                     <tr>
-                        <td><?php echo $gebruiker->Gebruikers_Voornaam; ?></td>
-                        <td><?php echo $gebruiker->Gebruikers_Tussenvoegsel; ?></td>
-                        <td><?php echo $gebruiker->Gebruikers_Achternaam; ?></td>
-                        <td><?php echo $gebruiker->Gebruikers_Email; ?></td>
-                        <td><?php echo $gebruiker->Gebruikers_Telefoonnummer; ?></td>
-                        <td><?php echo $gebruiker->Gebruikers_Gebruikersnaam; ?></td>
-                        <td><?php echo $gebruiker->Gebruikers_Wachtwoord; ?></td>
-                        <td><?php echo $gebruiker->Gebruikers_Rol; ?></td>
-                        <td><a href="edit_Gebruiker.php?id=<?php echo "$gebruiker->Gebruikers_ID"; ?>"><i class="fas fa-edit"></i></a></td>
-                        <td><a href="delete_Gebruiker.php?id=<?php echo "$gebruiker->Gebruikers_ID"; ?>"><i class="fas fa-times"></i></a></td>
+                        <th>Voornaam</th>
+                        <th>tussenvoegsels</th>
+                        <th>achternaam</th>
+                        <th>email</th>
+                        <th>telefoonnummer</th>
+                        <th>gebruikersnaam</th>
+                        <th>Wachtwoord</th>
+                        <th>rol</th>
+                        <td></td>
+                        <td></td>
                     </tr>
-                <?php endforeach;
-                ?>
-            </table>
+                    <?php foreach($gebruikers as $gebruiker): ?>
+                        <tr>
+                            <td><?php echo $gebruiker->Gebruikers_Voornaam; ?></td>
+                            <td><?php echo $gebruiker->Gebruikers_Tussenvoegsel; ?></td>
+                            <td><?php echo $gebruiker->Gebruikers_Achternaam; ?></td>
+                            <td><?php echo $gebruiker->Gebruikers_Email; ?></td>
+                            <td><?php echo $gebruiker->Gebruikers_Telefoonnummer; ?></td>
+                            <td><?php echo $gebruiker->Gebruikers_Gebruikersnaam; ?></td>
+                            <td><?php echo $gebruiker->Gebruikers_Wachtwoord; ?></td>
+                            <td><?php echo $gebruiker->Gebruikers_Rol; ?></td>
+                            <td><a href="edit_Gebruiker.php?id=<?php echo "$gebruiker->Gebruikers_ID"; ?>"><i class="fas fa-edit"></i></a></td>
+                            <td><a href="delete_Gebruiker.php?id=<?php echo "$gebruiker->Gebruikers_ID"; ?>"><i class="fas fa-times"></i></a></td>
+                        </tr>
+                    <?php endforeach;
+                    ?>
+                </table>
 
-            <table border="1px" class="tableTabletEnMobiel">
-                <tr>
-                    <th>Voornaam</th>
-                    <th>achternaam</th>
-                    <th>email</th>
-                    <th>rol</th>
-                </tr>
-                <?php foreach($gebruikers as $gebruiker): ?>
+                <table border="1px" class="tableTabletEnMobiel">
                     <tr>
-                        <td><?php echo $gebruiker->Gebruikers_Voornaam; ?></td>
-                        <td><?php echo $gebruiker->Gebruikers_Achternaam; ?></td>
-                        <td><?php echo $gebruiker->Gebruikers_Email; ?></td>
-                        <td><?php echo $gebruiker->Gebruikers_Rol; ?></td>
+                        <th>Voornaam</th>
+                        <th>achternaam</th>
+                        <th>email</th>
+                        <th>rol</th>
                     </tr>
-                <?php endforeach;
-                ?>
-            </table>
-        </div>
+                    <?php foreach($gebruikers as $gebruiker): ?>
+                        <tr>
+                            <td><?php echo $gebruiker->Gebruikers_Voornaam; ?></td>
+                            <td><?php echo $gebruiker->Gebruikers_Achternaam; ?></td>
+                            <td><?php echo $gebruiker->Gebruikers_Email; ?></td>
+                            <td><?php echo $gebruiker->Gebruikers_Rol; ?></td>
+                        </tr>
+                    <?php endforeach;
+                    ?>
+                </table>
+            </div>
 
         </div>
         <div id="mainSideBar" class="inline-blocks">

@@ -23,6 +23,11 @@
 
     }
 
+    if (isset($_POST['back']))
+    {
+        redirect_to("adresboekAdmin.php");
+    }
+
     ?>
 </head>
 <body>
@@ -53,6 +58,7 @@
                 Rol : <input type="text" name="rol"><br>
 
                 <input type="submit" name="submit" value="Voeg toe">
+                <input type="submit" name="back" value="Terug">
             </form>
 
 
