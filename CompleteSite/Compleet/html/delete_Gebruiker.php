@@ -9,7 +9,7 @@ if(isset($_GET['id'])) {
     if($gebruiker->Delete()){
         redirect_to("adresboekAdmin.php");
     } else{
-        echo "Delete faild";
+        echo "Verwijderen mislukt";
     }
 }
 ?>
