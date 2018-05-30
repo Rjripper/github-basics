@@ -1,0 +1,933 @@
+.container-inline-blocks
+{
+    display: block;
+    word-spacing: -6px;
+}
+
+.inline-blocks
+{
+    display: inline-block;
+    word-spacing: normal;
+    vertical-align: top;
+}
+
+.displayblocks
+{
+    display: block;
+}
+
+body
+{
+    width: 100%;
+    height: 100%;
+    padding: 0px;
+    margin: 0px;
+    font-family: Arial;
+    line-height: 1.2em;
+    font-size: 100%;
+    overflow-x: hidden;
+    color: grey;
+}
+
+/*
+    PC / Laptop
+*/
+
+#container
+{
+    max-width:100%;
+    height:auto;
+}
+
+/*
+-------------------------------------------------------------------------
+                       Header divs en opmaak
+-------------------------------------------------------------------------
+*/
+
+header
+{
+    width: 100%;
+    height: auto;
+    background: #313131;
+}
+
+#headerLogo
+{
+    width: 80%;
+    height: auto;
+    color: white;
+}
+
+#headerLogo h1
+{
+    margin-left: 2.5%;
+}
+
+#headerButtons
+{
+    width: 20%;
+    height: auto;
+}
+
+#headerButtonsPaginaButton
+{
+    width: 100%;
+    height: auto;
+}
+
+#headerButtonsPaginaButtonBlock1
+{
+    width: 96%;
+    height: auto;
+    text-align: right;
+}
+
+#headerButtonsPaginaButtonBlock2
+{
+    width: 4%;
+    height: auto;
+}
+
+#headerButtonsPaginaButton button
+{
+    margin-top: 18px;
+    padding: 5px 5px 5px 5px;
+    background-color: white;
+    border: none;
+    margin-right: 15%;
+}
+#headerButtonsPaginaButton a
+{
+    text-decoration: none;
+}
+
+#headerButton
+{
+    width: 100%;
+    height: auto;
+    display: none;
+}
+
+#headerButtonImage
+{
+    width: 50%;
+    height: auto;
+    text-align: center;
+}
+.fa-align-justify
+{
+    width: 100%;
+    color: white;
+
+}
+
+
+
+/*
+-------------------------------------------------------------------------
+                        Main divs en opmaak
+-------------------------------------------------------------------------
+*/
+
+main
+{
+    width: 100%;
+    height: auto;
+}
+
+#mainListItems
+{
+    width: 100%;
+    height: auto;
+}
+
+/*
+-------------------------------------------------------------------------
+                   Linker info  Gebruiker/Admin
+                   Met zoeken, uitloggen (voeg toe voor admin)
+-------------------------------------------------------------------------
+*/
+
+#mainListItemsLinks
+{
+    width: 30%;
+    height: auto;
+}
+
+#mainListItemsLinks button
+{
+    width: 100%;
+    border: none;
+    background: none;
+    text-align: left;
+}
+
+#mainListItemsLinks input
+{
+    width: 100%;
+    border: none;
+    background: none;
+    text-align: left;
+}
+
+
+#mainListItemsRechts
+{
+    width: 69.5%;
+    height: auto;
+}
+
+#mainListItemsLinks table
+{
+    width: 100%;
+    border: 1px solid black;
+    border-collapse: collapse;
+
+}
+
+.tableOpmaakLosseButtons
+{
+    /*max-width: 268px;*/
+    width: 100%;
+    height: auto;
+}
+
+#mainListItemsLinksBlock1
+{
+    width: 100%;
+    height: auto;
+    border: solid grey 0.5px;
+}
+
+#mainListItemsLinksGebruikernaam
+{
+    width: 75%;
+    height: auto;
+    text-align: center;
+    padding-top: 13px;
+
+}
+
+#mainListItemsLinksGebruikernaam h1
+{
+    font-size: 25px;
+    color: #000081;
+}
+
+#mainListItemsLinksImg
+{
+    width: 25%;
+    height: auto;
+    text-align: center;
+}
+
+#mainListItemsLinksImg img
+{
+    margin: 20px 0px 20px 20px;
+    width: 40%;
+    height: 40%;
+}
+
+#mainListItemsLinksBlock3:hover,
+#mainListItemsLinksBlock4:hover
+{
+    background: lightgrey;
+}
+
+
+
+#mainListItemsLinksBlock2,
+#mainListItemsLinksBlock3,
+#mainListItemsLinksBlock4
+{
+    width: 100%;
+    height: auto;
+    border: solid grey 0.5px;
+    margin: 10px 0px 10px 0px;
+    padding: 5px 0px 5px 0px;
+}
+
+#mainListItemsLinksBlock2img
+{
+    width: 10%;
+    height: auto;
+    text-align: center;
+}
+
+
+.fa-search
+{
+    color: black;
+    padding: 2px 5px 2px 0px;
+}
+
+
+#mainListItemsLinksBlock2Zoeken
+{
+    width: 90%;
+    height: auto;
+}
+
+#mainListItemsLinksBlock2Zoeken input
+{
+    color: grey;
+    font-size: 16px;
+}
+
+#mainListItemsLinksBlock3 button,
+#mainListItemsLinksBlock4 button
+{
+    color: grey;
+    font-size: 18px;
+}
+
+#mainListItemsLinksBlock3 a,
+#mainListItemsLinksBlock4 a
+{
+    color: grey;
+    font-size: 16px;
+}
+
+#mainListItemsLinksTable
+{
+    width: 80%;
+    height: auto;
+    margin: 30px 30px 30px 30px;
+}
+
+#mainListItemsLinksImg
+{
+    width: 23%;
+    height: auto;
+}
+
+#mainListItemsLinks a
+{
+    display: block;
+    text-decoration: none;
+
+}
+
+.fa-power-off, .fa-plus
+{
+    margin-right: 10px;
+    color: black;
+}
+
+
+.opmaakTDSorteer
+{
+    font-size: 18px;
+    font-weight: 100;
+    color: darkgrey;
+    letter-spacing: 1px;
+}
+#mainListItemsRechtsTable
+{
+    width:100%;
+    height: auto;
+}
+
+#mainListItemsRechtsTableForm
+{
+    width:100%;
+    height: auto;
+    margin-top: 30px;
+}
+
+#mainListItemsRechtsTableForm img
+{
+    width: 35%;
+    height: 35%;
+}
+
+
+
+
+
+
+/*
+-------------------------------------------------------------------------
+                        Sorteer Functie
+-------------------------------------------------------------------------
+*/
+
+#mainListItemsRechtsSorteerBlock
+{
+    width: 95%;
+    height: auto;
+    border: solid darkgrey 0.5px;
+    margin: 0px 0px 10px 0px;
+    text-align: center;
+    padding: 5px 0px 5px 0px;
+}
+
+#mainListItemsRechtsSorteerBlock1,
+#mainListItemsRechtsSorteerBlock2,
+#mainListItemsRechtsSorteerBlock3,
+#mainListItemsRechtsSorteerBlock4
+{
+    width: 25%;
+    height: auto;
+    margin:0;
+
+}
+
+#mainListItemsRechtsSorteerBlock1 input,
+#mainListItemsRechtsSorteerBlock2 input,
+#mainListItemsRechtsSorteerBlock3 input
+{
+    width:100%;
+    font-size: 15px;
+    color: grey;
+    background: none;
+    border: none;
+}
+
+#mainListItemsRechtsSorteerBlock1Naam
+{
+    width: 45%;
+}
+
+#mainListItemsRechtsSorteerBlock1Naam input
+{
+    text-align: right;
+}
+
+#mainListItemsRechtsSorteerBlock1NaamArrowUp
+{
+    width: 55%;
+    color: black;
+    text-align: left;
+}
+
+.fa-long-arrow-alt-up
+{
+    transform: rotateY(0deg);
+}
+
+.arrowRotate
+{
+    transform: rotate(180deg);
+}
+
+#mainListItemsRechtsSorteerBlock2Naam,
+#mainListItemsRechtsSorteerBlock3Naam
+{
+    width: 67.5%;
+}
+
+#mainListItemsRechtsSorteerBlock2Naam input,
+#mainListItemsRechtsSorteerBlock3Naam input
+{
+    text-align: right;
+}
+
+#mainListItemsRechtsSorteerBlock2NaamArrowUp,
+#mainListItemsRechtsSorteerBlock3NaamArrowUp
+{
+    width: 32.5%;
+    color: black;
+    text-align: left;
+}
+
+
+
+
+
+.flip {
+
+    transform: rotate(180deg);
+    -ms-transform: rotate(180deg); /* IE 9 */
+    -moz-transform: rotate(180deg); /* Firefox */
+    -webkit-transform: rotate(180deg); /* Safari and Chrome */
+    -o-transform: rotate(180deg); /* Opera */
+}
+
+
+
+
+
+
+
+/*
+-------------------------------------------------------------------------
+                        Tabel Rechts met gebuiker/contact gegevens
+-------------------------------------------------------------------------
+*/
+
+
+
+#mainListItemsRechtsLijst
+{
+    width: 95%;
+    height: auto;
+    border: solid darkgrey 0.5px;
+    margin: 0px 0px 10px 0px;
+    text-align: center;
+    padding: 5px 0px 5px 0px;
+
+}
+
+
+
+
+#mainListItemsRechtsLijstBlock1,
+#mainListItemsRechtsLijstBlock2,
+#mainListItemsRechtsLijstBlock3,
+#mainListItemsRechtsLijstBlock4
+{
+    width: 25%;
+    height: auto;
+    margin:0;
+
+}
+
+#mainListItemsRechtsLijstFoto
+{
+    width: 30%;
+    height: auto;
+}
+
+#mainListItemsRechtsLijstFoto img
+{
+    margin-top: 2px;
+}
+
+#mainListItemsRechtsLijstNaam
+{
+    width: 70%;
+    height: auto;
+    text-align: left;
+    font-size: 12px;
+    padding: 5px 0px 5px 0px;
+}
+
+#mainListItemsRechtsLijstEmail, #mainListItemsRechtsLijstRol
+{
+    width: 100%;
+    height: auto;
+    font-size: 12px;
+    padding: 5px 0px 5px 0px;
+}
+
+#mainListItemsRechtsLijstButtons1
+{
+    width: 80%;
+    height: auto;
+    padding: 5px 0px 5px 0px;
+    text-align: right;
+}
+
+#mainListItemsRechtsLijstButtons2
+{
+    width: 20%;
+    height: auto;
+    padding: 5px 0px 5px 0px;
+}
+
+.fa-edit, .fa-times
+{
+    height: auto;
+    color: black;
+}
+
+
+
+
+.tableTabletEnMobiel
+{
+    display:none;
+}
+
+
+#mainListItems li
+{
+    list-style: none;
+    margin: 1px;
+}
+
+#mainSideBar
+{
+    width: 40%;
+    height: auto;
+    background: #313131;
+    display: none;
+    color: #f1f1f1;
+    font-size: 100%;
+    display: none;
+}
+
+
+#mainSideBar li
+{
+    list-style: none;
+    font-size: 100%;
+}
+
+#mainSideBar a
+{
+    text-decoration: none;
+    color: #f1f1f1;
+}
+
+
+/*
+-------------------------------------------------------------------------
+                        Footer divs en op
+-------------------------------------------------------------------------
+*/
+
+footer
+{
+    width: 100%;
+    height: 62px;
+    background: #313131;
+}
+
+
+
+/*
+-------------------------------------------------------------------------
+                       Media query voor Tablet/Ipad
+-------------------------------------------------------------------------
+*/
+
+@media screen and (max-width:768px)
+{
+
+    body
+    {
+        font-size: 110%;
+    }
+
+    #container
+    {
+        width: 100%;
+        height: auto;
+    }
+
+
+    #mainListItems
+    {
+        width: 60.15%;
+        height: auto;
+    }
+
+    #mainListItemsLinks
+    {
+        display: none;
+    }
+
+
+
+    .tableLaptop
+    {
+        display: none;
+    }
+
+    .tableTabletEnMobiel
+    {
+        display: inline-block;
+
+        border-collapse: collapse;
+    }
+
+    #mainListItemsRechtsSorteerBlock
+    {
+        display:none;
+    }
+
+    #mainListItemsRechts
+    {
+        width: 100%;
+        height: auto;
+        font-size: 80%;
+    }
+
+    #mainListItemsRechtsTable,
+    #mainListItemsRechtsTableForm
+    {
+        width: 100%;
+        height: auto;
+    }
+
+    #mainListItemsRechtsLijstBlock4
+    {
+        display:none;
+    }
+
+    #mainListItemsRechtsLijstBlock1,
+    #mainListItemsRechtsLijstBlock2,
+    #mainListItemsRechtsLijstBlock3
+    {
+        width: 33.3%;
+        height: auto;
+    }
+
+    #mainListItemsRechtsLijstFoto img
+    {
+        margin-top: 10px;
+    }
+
+    #headerButton
+    {
+        display: inline-block;
+        text-align: right;
+        margin-top: 25px;
+    }
+
+    #headerButtonsPaginaButton
+    {
+        display: none;
+    }
+
+    #mainListItemsRechtsSorteerBlock
+    {
+        display: none;
+    }
+
+    #mainSideBar
+    {
+        width: 40%;
+        display: inline-block;
+    }
+
+    #mainSideBarBlock
+    {
+        width: 100%;
+        height: auto;
+    }
+
+
+
+    #mainSideBarBlockPositie
+    {
+        width: 100%;
+        height: auto;
+        text-align: center;
+    }
+
+    #mainSideBarBlockSorteer
+    {
+        width: 50%;
+        height: auto;
+        text-align: left;
+        margin-bottom: 20px;
+    }
+
+    #mainSideBarBlockSorteer input
+    {
+        background: none;
+        border: none;
+        color: white;
+    }
+
+
+    #mainSideBarBlockZoeken
+    {
+        width: 50%;
+        height: auto;
+        margin-bottom: 30px;
+        text-align: left;
+    }
+
+    #mainSideBarBlockZoeken input
+    {
+        width:100%;
+    }
+
+    #mainSideBarBlockToevoegen
+    {
+        width: 50%;
+        height: auto;
+        margin-bottom: 10px;
+        text-align: left;
+
+    }
+
+    #mainSideBarBlockUitloggen
+    {
+        width: 50%;
+        height: auto;
+        margin-bottom: 10px;
+        text-align: left;
+    }
+
+    #mainSideBar h1
+    {
+        font-size: 100%;
+    }
+    #mainSideBar li
+    {
+        font-size: 100%;
+    }
+}
+
+
+
+/*
+-------------------------------------------------------------------------
+                        Media query voor mobiel
+-------------------------------------------------------------------------
+*/
+@media screen and (max-width: 480px)
+{
+    body
+    {
+        font-size: 100%;
+    }
+
+    #container
+    {
+        width: 100%;
+        height: auto;
+
+    }
+
+    #mainListItems
+    {
+        width: 60.15%;
+        height: auto;
+    }
+
+    #mainListItemsLinks
+    {
+        display: none;
+    }
+
+    .tableLaptop
+    {
+        display: none;
+    }
+
+    #mainListItemsRechtsSorteerBlock
+    {
+        display:none;
+    }
+
+    .tableTabletEnMobiel
+    {
+        display: inline-block;
+
+
+    }
+
+
+    #mainListItemsRechts
+    {
+        width: 100%;
+        height: auto;
+        font-size: 70%;
+    }
+
+    #mainListItemsRechtsTable,
+    #mainListItemsRechtsTableForm
+    {
+        width: 100%;
+        height: auto;
+    }
+
+    #mainListItemsRechtsLijstBlock4
+    {
+        display:none;
+    }
+
+
+    #mainListItemsRechtsLijstBlock1,
+    #mainListItemsRechtsLijstBlock2,
+    #mainListItemsRechtsLijstBlock3
+    {
+        width: 33.3%;
+        height: auto;
+    }
+    #mainListItemsRechtsLijstFoto img
+    {
+        width: 50%;
+        height: 50%;
+        margin-top: 10px;
+    }
+
+
+    #headerButton
+    {
+        text-align: right;
+        display: inline-block;
+        margin-top: 25px;
+    }
+
+    #headerButtonsPaginaButton
+    {
+        display: none;
+    }
+
+    #mainSideBar
+    {
+        display: inline-block;
+        width: 40%;
+    }
+
+    #mainSideBarBlock
+    {
+        width: 100%;
+        height: auto;
+    }
+
+
+    #mainSideBarBlockPositie
+    {
+        width: 100%;
+        height: auto;
+        text-align: center;
+    }
+
+    #mainSideBarBlockSorteer
+    {
+        width: 50%;
+        height: auto;
+        text-align: left;
+        margin-bottom: 20px;
+    }
+
+    #mainSideBarBlockSorteer input
+    {
+        background: none;
+        border: none;
+        color: white;
+    }
+
+
+
+    #mainSideBarBlockZoeken
+    {
+        width: 50%;
+        height: auto;
+        margin-bottom: 30px;
+        text-align: left;
+    }
+
+    #mainSideBarBlockToevoegen
+    {
+        width: 50%;
+        height: auto;
+        margin-bottom: 10px;
+        text-align: left;
+
+    }
+
+    #mainSideBarBlockUitloggen
+    {
+        width: 50%;
+        height: auto;
+        margin-bottom: 10px;
+        text-align: left;
+    }
+
+    #mainSideBar h1
+    {
+        font-size: 100%;
+    }
+}
+
+
