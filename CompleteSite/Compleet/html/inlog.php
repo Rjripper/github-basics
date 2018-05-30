@@ -6,9 +6,9 @@ $message = "";
 if($session->is_logged_in())
 {
     if(!$_SESSION['user_rol'] == "admin" || !$_SESSION['user_rol'] == "Admin"){
-        redirect_to("adresboekAdmin.php");
+        redirect_to("adresboekAdminGebruikers.php");
     } else{
-        redirect_to("adresboek.php");
+        redirect_to("adresboekGebruikerContacten.php");
     }
 }
 
@@ -35,11 +35,11 @@ if(isset($_POST['submit']))
     {
         if($found_user->Gebruikers_Rol == "admin" || $found_user->Gebruikers_Rol == "Admin"){
             $session->login($found_user);
-            redirect_to("adresboekAdmin.php");
+            redirect_to("adresboekAdminGebruikers.php");
         }
         else{
             $session->login($found_user);
-            redirect_to("adresboek.php");
+            redirect_to("adresboekGebruikerContacten.php");
         }
 
     } else{

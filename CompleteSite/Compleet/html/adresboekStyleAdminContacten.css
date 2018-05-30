@@ -1,14 +1,14 @@
 .container-inline-blocks
 {
-    display: block;
-    word-spacing: -6px;
+  display: block;
+  word-spacing: -6px;
 }
 
 .inline-blocks
 {
-    display: inline-block;
-    word-spacing: normal;
-    vertical-align: top;
+  display: inline-block;
+  word-spacing: normal;
+  vertical-align: top;
 }
 
 .displayblocks
@@ -16,7 +16,7 @@
     display: block;
 }
 
-body
+body 
 {
     width: 100%;
     height: 100%;
@@ -30,13 +30,13 @@ body
 }
 
 /*
-    PC / Laptop
+    PC / Laptop 
 */
 
 #container
 {
     max-width:100%;
-    height:auto;
+    height:auto; 
 }
 
 /*
@@ -139,7 +139,7 @@ main
 #mainListItems
 {
     width: 100%;
-    height: auto;
+    height: auto;    
 }
 
 /*
@@ -377,13 +377,13 @@ main
 #mainListItemsRechtsSorteerBlock1 input,
 #mainListItemsRechtsSorteerBlock2 input,
 #mainListItemsRechtsSorteerBlock3 input
-{
-    width:100%;
-    font-size: 15px;
-    color: grey;
-    background: none;
-    border: none;
-}
+ {
+     width:100%;
+     font-size: 15px;
+     color: grey;
+     background: none;
+     border: none;
+ }
 
 #mainListItemsRechtsSorteerBlock1Naam
 {
@@ -492,7 +492,7 @@ main
 
 #mainListItemsRechtsLijstFoto img
 {
-    margin-top: 2px;
+   margin-top: 2px;
 }
 
 #mainListItemsRechtsLijstNaam
@@ -521,11 +521,11 @@ main
 }
 
 #mainListItemsRechtsLijstButtons2
-{
+ {
     width: 20%;
     height: auto;
     padding: 5px 0px 5px 0px;
-}
+ }
 
 .fa-edit, .fa-times
 {
@@ -598,8 +598,8 @@ footer
 {
 
     body
-    {
-        font-size: 110%;
+    {        
+        font-size: 110%;    
     }
 
     #container
@@ -634,11 +634,12 @@ footer
         border-collapse: collapse;
     }
 
+
+
     #mainListItemsRechtsSorteerBlock
     {
         display:none;
     }
-
 
     #mainListItemsRechts
     {
@@ -675,7 +676,7 @@ footer
 
     #headerButton
     {
-        display: inline-block;
+        display: inline-block;    
         text-align: right;
         margin-top: 25px;
     }
@@ -684,12 +685,7 @@ footer
     {
         display: none;
     }
-
-    #mainListItemsRechtsSorteerBlock
-    {
-        display: none;
-    }
-
+    
     #mainSideBar
     {
         width: 40%;
@@ -740,7 +736,7 @@ footer
         width:100%;
     }
 
-    #mainSideBarBlockUitloggen
+    #mainSideBarBlockToevoegenEnUitloggen
     {
         width: 100%;
         height: auto;
@@ -748,6 +744,7 @@ footer
         margin-left: -40%;
     }
 
+    .fa-plus-square,
     .fa-sign-out-alt
     {
         margin-bottom: 30px;
@@ -762,6 +759,11 @@ footer
     {
         font-size: 100%;
     }
+
+    span
+    {
+        color: white;
+    }
 }
 
 
@@ -774,7 +776,7 @@ footer
 @media screen and (max-width: 480px)
 {
     body
-    {
+	{
         font-size: 100%;
     }
 
@@ -819,6 +821,7 @@ footer
         width: 100%;
         height: auto;
         font-size: 70%;
+        margin-left: 2%;
     }
 
     #mainListItemsRechtsTable,
@@ -830,9 +833,8 @@ footer
 
     #mainListItemsRechtsLijstBlock4
     {
-        display:none;
+       display:none;
     }
-
 
     #mainListItemsRechtsLijstBlock1,
     #mainListItemsRechtsLijstBlock2,
@@ -848,12 +850,11 @@ footer
         margin-top: 10px;
     }
 
-
     #headerButton
     {
-        text-align: right;
-        display: inline-block;
-        margin-top: 25px;
+       text-align: right;
+       display: inline-block;
+       margin-top: 25px;
     }
 
     #headerButtonsPaginaButton
@@ -897,7 +898,6 @@ footer
     }
 
 
-
     #mainSideBarBlockZoeken
     {
         width: 50%;
@@ -906,7 +906,7 @@ footer
         text-align: left;
     }
 
-    #mainSideBarBlockUitloggen
+    #mainSideBarBlockToevoegenEnUitloggen
     {
         width: 100%;
         height: auto;
@@ -914,16 +914,21 @@ footer
         margin-left: -40%;
     }
 
+    .fa-plus-square,
     .fa-sign-out-alt
     {
         margin-bottom: 30px;
         font-size: 140%;
     }
 
-
     #mainSideBar h1
     {
         font-size: 100%;
+    }
+
+    span
+    {
+        color: white;
     }
 }
 
