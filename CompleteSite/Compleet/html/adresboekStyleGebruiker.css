@@ -639,11 +639,13 @@ footer
         display:none;
     }
 
+
     #mainListItemsRechts
     {
         width: 100%;
         height: auto;
         font-size: 80%;
+        margin-left: 2%;
     }
 
     #mainListItemsRechtsTable,
@@ -738,21 +740,18 @@ footer
         width:100%;
     }
 
-    #mainSideBarBlockToevoegen
-    {
-        width: 50%;
-        height: auto;
-        margin-bottom: 10px;
-        text-align: left;
-
-    }
-
     #mainSideBarBlockUitloggen
     {
-        width: 50%;
+        width: 100%;
         height: auto;
         margin-bottom: 10px;
-        text-align: left;
+        margin-left: -40%;
+    }
+
+    .fa-sign-out-alt
+    {
+        margin-bottom: 30px;
+        font-size: 140%;
     }
 
     #mainSideBar h1
@@ -907,22 +906,20 @@ footer
         text-align: left;
     }
 
-    #mainSideBarBlockToevoegen
-    {
-        width: 50%;
-        height: auto;
-        margin-bottom: 10px;
-        text-align: left;
-
-    }
-
     #mainSideBarBlockUitloggen
     {
-        width: 50%;
+        width: 100%;
         height: auto;
         margin-bottom: 10px;
-        text-align: left;
+        margin-left: -40%;
     }
+
+    .fa-sign-out-alt
+    {
+        margin-bottom: 30px;
+        font-size: 140%;
+    }
+
 
     #mainSideBar h1
     {

@@ -634,7 +634,7 @@ footer
         border-collapse: collapse;
     }
 
-    .toggle
+
 
     #mainListItemsRechtsSorteerBlock
     {
@@ -646,6 +646,7 @@ footer
         width: 100%;
         height: auto;
         font-size: 80%;
+        margin-left: 2%;
     }
 
     #mainListItemsRechtsTable,
@@ -735,21 +736,19 @@ footer
         width:100%;
     }
 
-    #mainSideBarBlockToevoegen
+    #mainSideBarBlockToevoegenEnUitloggen
     {
-        width: 50%;
+        width: 100%;
         height: auto;
         margin-bottom: 10px;
-        text-align: left;
-
+        margin-left: -40%;
     }
 
-    #mainSideBarBlockUitloggen
+    .fa-plus-square,
+    .fa-sign-out-alt
     {
-        width: 50%;
-        height: auto;
-        margin-bottom: 10px;
-        text-align: left;
+        margin-bottom: 30px;
+        font-size: 140%;
     }
 
     #mainSideBar h1
@@ -759,6 +758,11 @@ footer
     #mainSideBar li
     {
         font-size: 100%;
+    }
+
+    span
+    {
+        color: white;
     }
 }
 
@@ -817,6 +821,7 @@ footer
         width: 100%;
         height: auto;
         font-size: 70%;
+        margin-left: 2%;
     }
 
     #mainListItemsRechtsTable,
@@ -901,26 +906,29 @@ footer
         text-align: left;
     }
 
-    #mainSideBarBlockToevoegen
+    #mainSideBarBlockToevoegenEnUitloggen
     {
-        width: 50%;
+        width: 100%;
         height: auto;
         margin-bottom: 10px;
-        text-align: left;
-
+        margin-left: -40%;
     }
 
-    #mainSideBarBlockUitloggen
+    .fa-plus-square,
+    .fa-sign-out-alt
     {
-        width: 50%;
-        height: auto;
-        margin-bottom: 10px;
-        text-align: left;
+        margin-bottom: 30px;
+        font-size: 140%;
     }
 
     #mainSideBar h1
     {
         font-size: 100%;
+    }
+
+    span
+    {
+        color: white;
     }
 }
 

@@ -238,11 +238,15 @@ if(!$session->is_logged_in())
                         </div>
                     </div>
 
-                    <!-- Log uit functie -->
+                    <!-- log uit functie -->
                     <div id="mainSideBarBlockUitloggen" class="inline-blocks">
-                        <div class="inline-blocks">
-                            <a href="loguit.php"><li>Uitloggen</li></a>
+
+                        <!-- log uit functie -->
+                        <div class="container-inline-blocks">
+                            <a href="loguit.php"><i class="fas fa-sign-out-alt"></i></a>
                         </div>
+
+
                     </div>
 
                 </div>

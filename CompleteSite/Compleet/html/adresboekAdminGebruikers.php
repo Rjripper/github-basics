@@ -58,8 +58,9 @@ if(!$session->is_logged_in())
 
             <div id="headerButton" class="inline-blocks">
                 <div id="headerButtonImage" class="inline-blocks">
-                    <i class="fas fa-align-justify" onclick="toggleSidebar('mainSideBar');">
-                    </i>
+                  <span style="cursor:pointer;"  onclick="toggleSidebar('mainSideBar');">
+                        &#9776;
+                  </span>
                 </div>
             </div>
         </div>
@@ -242,44 +243,48 @@ if(!$session->is_logged_in())
     </div>
         <div id="mainSideBar" class="inline-blocks">
             <div  id="mainSideBarBlock" class="container-inline-blocks">
-                <div id="mainSideBarBlockPositie" class="inline-blocks">
-                    <!-- Sorteer functie -->
-                    <div id="mainSideBarBlockSorteer" class="inline-blocks">
-                        <div class="inline-blocks">
-                            <h1>Sorteren op:</h1>
-                        </div>
-                        <div >
-                            <input type="submit" name="naam" value="Naam">
-                        </div>
-                        <div >
-                            <input type="submit" name="email" value="email">
-                        </div>
-                        <div >
-                            <input type="submit" name="rol" value="rol">
-                        </div>
-                    </div>
+                    <div id="mainSideBarBlockPositie" class="inline-blocks">
 
-                    <!-- Zoek functie -->
-                    <div id="mainSideBarBlockZoeken" class="inline-blocks">
-                        <div class="inline-blocks">
-                            <h1>Zoeken op gebruikers:</h1>
-                            <input type="text" name="naam" value="Zoeken">
+                        <!-- Sorteer functie -->
+                        <div id="mainSideBarBlockSorteer" class="inline-blocks">
+                            <div class="inline-blocks">
+                                <h1>Sorteren op:</h1>
+                            </div>
+                            <div >
+                                <input type="submit" name="naam" value="Naam">
+                            </div>
+                            <div >
+                                <input type="submit" name="email" value="email">
+                            </div>
+                            <div >
+                                <input type="submit" name="rol" value="rol">
+                            </div>
                         </div>
-                    </div>
 
-                    <!-- Voeg gebruiker toe functie -->
-                    <div id="mainSideBarBlockToevoegen" class="inline-blocks">
-                        <div class="inline-blocks" >
-                            <a href="add_Gebruiker.php"><li>Voeg gebruiker toe</li></a>
+                        <!-- Zoek functie -->
+                        <div id="mainSideBarBlockZoeken" class="inline-blocks">
+                            <div class="inline-blocks">
+                                <h1>Zoeken op gebruikers:</h1>
+                                <input type="text" name="naam" value="Zoeken">
+                            </div>
                         </div>
-                    </div>
 
-                    <!-- Log uit functie -->
-                    <div id="mainSideBarBlockUitloggen" class="inline-blocks">
-                        <div class="inline-blocks">
-                            <a href="loguit.php"><li>Uitloggen</li></a>
+                        <!-- Voeg gebruiker toe functie en log uit functie -->
+                        <div id="mainSideBarBlockToevoegenEnUitloggen" class="inline-blocks">
+
+                                <!-- add gebruiker functie -->
+                                <div class="container-inline-blocks" >
+                                    <a href="add_Gebruiker.php"><i class="fas fa-plus-square"></i></a>
+                                </div>
+                                <!-- log uit functie -->
+                                <div class="container-inline-blocks">
+                                    <a href="loguit.php"><i class="fas fa-sign-out-alt"></i></a>
+                                </div>
+
+
                         </div>
-                    </div>
+
+
 
                 </div>
             </div>

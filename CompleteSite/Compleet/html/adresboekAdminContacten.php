@@ -58,8 +58,9 @@ if(!$session->is_logged_in())
 
             <div id="headerButton" class="inline-blocks">
                 <div id="headerButtonImage" class="inline-blocks">
-                    <i class="fas fa-align-justify" onclick="toggleSidebar('mainSideBar');">
-                    </i>
+                    <span style="cursor:pointer;"  onclick="toggleSidebar('mainSideBar');">
+                        &#9776;
+                    </span>
                 </div>
             </div>
         </div>
@@ -267,18 +268,19 @@ if(!$session->is_logged_in())
                         </div>
                     </div>
 
-                    <!-- Voeg gebruiker toe functie -->
-                    <div id="mainSideBarBlockToevoegen" class="inline-blocks">
-                        <div class="inline-blocks" >
-                            <a href="add_Gebruiker.php"><li>Voeg contact toe</li></a>
-                        </div>
-                    </div>
+                    <!-- Voeg gebruiker toe functie en log uit functie -->
+                    <div id="mainSideBarBlockToevoegenEnUitloggen" class="inline-blocks">
 
-                    <!-- Log uit functie -->
-                    <div id="mainSideBarBlockUitloggen" class="inline-blocks">
-                        <div class="inline-blocks">
-                            <a href="loguit.php"><li>Uitloggen</li></a>
+                        <!-- add gebruiker functie -->
+                        <div class="container-inline-blocks" >
+                            <a href="add_Gebruiker.php"><i class="fas fa-plus-square"></i></a>
                         </div>
+                        <!-- log uit functie -->
+                        <div class="container-inline-blocks">
+                            <a href="loguit.php"><i class="fas fa-sign-out-alt"></i></a>
+                        </div>
+
+
                     </div>
 
                 </div>
