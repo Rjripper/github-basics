@@ -1,0 +1,80 @@
+#pagination {
+    word-spacing: normal;
+    margin: auto 0;
+    margin-left: 500px;
+}
+
+.displayinlineblocks{
+    display: inline-block;
+    word-spacing: normal;
+}
+
+.displayblocks{
+    display: block;
+    word-spacing: -6px;
+    width: 100%;
+}
+
+#pagination a {
+    text-decoration: none;
+    /*padding: 2px 10px 2px 10px;*/
+    /*border: 1px solid lightgray;*/
+    color: black;
+    text-align: center;
+}
+
+#backpijl{
+    text-decoration: none;
+    /*padding: 3px 6px 3px 6px;*/
+    /*border: 1px solid lightgray;*/
+    color: black;
+    text-align: center;
+}
+
+#spanVoor1{
+/*padding: 3px 6px 3px 6px;*/
+    text-align: center;
+}
+
+#paginationInhoud{
+    width: 20%;
+    height: auto;
+    border: 0.2px solid lightgray;
+    text-align: center;
+}
+
+#afmetingenPijlLinks{
+    width: 20%;
+    height: auto;
+    border: 0.2px solid lightgray;
+}
+
+#afmetingenHuidigePagina{
+    width: 20%;
+    height: auto;
+    border: 0.2px solid lightgray;
+}
+
+#Afmetingpuntjes{
+    width: 20%;
+    height: auto;
+    border: 0.2px solid lightgray;
+}
+
+#afmetingenTotalePagina{
+    width: 20%;
+    height: auto;
+    border: 0.2px solid lightgray;
+}
+
+#paginationInhoudPositie
+{
+    width: 100%;
+    height: auto;
+}
+
+#afmetingenPijlRechts{
+    width: 20%;
+    height: auto;
+    border: 0.2px solid lightgray;
+}
