@@ -1,0 +1,134 @@
+.container-inline-blocks
+{
+  display: block;
+  word-spacing: -5px;
+}
+
+.inline-blocks
+{
+  display: inline-block;
+  word-spacing: normal;
+  vertical-align: top;
+}
+
+body 
+{
+    padding: 0px;
+    margin:0px;
+    font-family: Cambria, Georgia, serif;
+    line-height: 1.2em;
+    font-size: 100%;
+    background: url(../images/BackgroundImage.png);
+
+}
+
+#container
+{
+    max-width:100%;
+    height:auto; 
+    margin: 0 auto;
+}
+
+header 
+{
+    width: 100%;
+    height: auto;
+    text-align: center;
+}
+header h1
+{
+    color: white;
+}
+
+main
+{
+    width: 100%;
+    height: auto;
+    text-align: center;
+}
+#mainForm
+{
+    width: 100%;
+    height: auto;
+    text-align: center;
+}
+
+
+#mainForm input
+{
+    width: 15%;
+    -webkit-border-radius: 5px;
+    -moz-border-radius: 5px;
+    border-radius: 5px;
+    border: none;
+    padding: 10px 10px 10px 10px;
+    margin: 5px 0px 5px 0px;
+
+}
+
+.classSubmit
+{
+    background: #000082;
+    color: #ffffff;
+
+}
+
+.classUseEnPass
+{
+    background-color: #ffffff;
+    color: #000081;
+
+}
+
+
+/*
+    Tablet
+*/
+
+@media screen and (max-width:768px)
+{
+
+    body
+    {        
+        font-size: 110%;    
+    }
+
+    #container
+    {
+        width: 100%;
+        height: auto;
+       
+    }
+
+    #mainForm
+    {
+        width: 120%;
+    }
+}
+
+/*
+    Mobiel
+*/
+@media screen and (max-width: 480px)
+{
+    body
+	{
+        font-size: 120%;       
+
+    }
+    
+    #container
+    {
+        width: 100%;
+        height: auto;
+
+    }
+
+    #mainForm
+    {
+        width: 120%;
+    }
+}
+
+
+
