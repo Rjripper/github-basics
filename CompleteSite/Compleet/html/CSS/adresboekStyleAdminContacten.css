@@ -62,12 +62,14 @@ header
 #headerLogo h1
 {
     margin-left: 2.5%;
+    font-size: 50px;
 }
 
 #headerButtons
 {
     width: 20%;
     height: auto;
+    box-sizing: border-box;
 }
 
 #headerButtonsPaginaButton
@@ -81,6 +83,7 @@ header
     width: 96%;
     height: auto;
     text-align: right;
+    padding-top: 10px;
 }
 
 #headerButtonsPaginaButtonBlock2
@@ -95,7 +98,8 @@ header
     padding: 5px 5px 5px 5px;
     background-color: white;
     border: none;
-    margin-right: 15%;
+    margin-right: 3%;
+    font-size: 18px;
 }
 #headerButtonsPaginaButton a
 {
@@ -115,6 +119,8 @@ header
     height: auto;
     text-align: center;
 }
+
+
 .fa-align-justify
 {
     width: 100%;
@@ -134,12 +140,15 @@ main
 {
     width: 100%;
     height: auto;
+    word-spacing: -4.5px !important;
 }
 
 #mainListItems
 {
-    width: 100%;
-    height: auto;    
+    width: 70%;
+    height: auto;
+    box-sizing: border-box;
+    padding: 30px;
 }
 
 /*
@@ -149,13 +158,16 @@ main
 -------------------------------------------------------------------------
 */
 
-#mainListItemsLinks
+#mainSearchBlock
 {
     width: 30%;
     height: auto;
+    padding: 30px;
+    box-sizing: border-box;
+
 }
 
-#mainListItemsLinks button
+#mainSearchBlock button
 {
     width: 100%;
     border: none;
@@ -163,7 +175,7 @@ main
     text-align: left;
 }
 
-#mainListItemsLinks input
+#mainSearchBlock input
 {
     width: 100%;
     border: none;
@@ -178,7 +190,7 @@ main
     height: auto;
 }
 
-#mainListItemsLinks table
+#mainSearchBlocktable
 {
     width: 100%;
     border: 1px solid black;
@@ -250,51 +262,40 @@ main
 
 #mainListItemsLinksBlock2img
 {
-    width: 10%;
+    width: 36px;
     height: auto;
-    text-align: center;
+
 }
 
 
 .fa-search
 {
     color: black;
-    padding: 2px 5px 2px 0px;
+    padding: 2px 5px 2px 5px;
 }
 
 
 #mainListItemsLinksBlock2Zoeken
 {
-    width: 90%;
+    width: calc(100% - 36px);
     height: auto;
 }
 
 #mainListItemsLinksBlock2Zoeken input
 {
     color: grey;
-    font-size: 16px;
-}
-
-#mainListItemsLinksBlock3 button,
-#mainListItemsLinksBlock4 button
-{
-    color: grey;
     font-size: 18px;
 }
+
 
 #mainListItemsLinksBlock3 a,
 #mainListItemsLinksBlock4 a
 {
     color: grey;
-    font-size: 16px;
+    font-size: 18px;
 }
 
-#mainListItemsLinksTable
-{
-    width: 80%;
-    height: auto;
-    margin: 30px 30px 30px 30px;
-}
+
 
 #mainListItemsLinksImg
 {
@@ -302,11 +303,12 @@ main
     height: auto;
 }
 
-#mainListItemsLinks a
+
+
+#mainSearchBlock a
 {
     display: block;
     text-decoration: none;
-
 }
 
 .fa-power-off, .fa-plus
@@ -323,20 +325,10 @@ main
     color: darkgrey;
     letter-spacing: 1px;
 }
-#mainListItemsRechtsTable
-{
-    width:100%;
-    height: auto;
-}
 
-#mainListItemsRechtsTableForm
-{
-    width:100%;
-    height: auto;
-    margin-top: 30px;
-}
 
-#mainListItemsRechtsTableForm img
+
+#mainListItems img
 {
     width: 35%;
     height: 35%;
@@ -355,12 +347,12 @@ main
 
 #mainListItemsRechtsSorteerBlock
 {
-    width: 95%;
+    width: 100%;
     height: auto;
     border: solid darkgrey 0.5px;
     margin: 0px 0px 10px 0px;
     text-align: center;
-    padding: 5px 0px 5px 0px;
+    padding: 10px 0px 10px 0px;
 }
 
 #mainListItemsRechtsSorteerBlock1,
@@ -371,28 +363,33 @@ main
     width: 25%;
     height: auto;
     margin:0;
-
 }
 
-#mainListItemsRechtsSorteerBlock1 input,
-#mainListItemsRechtsSorteerBlock2 input,
-#mainListItemsRechtsSorteerBlock3 input
- {
-     width:100%;
-     font-size: 15px;
-     color: grey;
-     background: none;
-     border: none;
- }
 
 #mainListItemsRechtsSorteerBlock1Naam
 {
     width: 45%;
+    text-align: right;
 }
 
-#mainListItemsRechtsSorteerBlock1Naam input
+#mainListItemsRechtsSorteerBlock1Naam button,
+#mainListItemsRechtsSorteerBlock2Naam button,
+#mainListItemsRechtsSorteerBlock3Naam button
 {
     text-align: right;
+    width:100%;
+    font-size: 20px;
+    background: none;
+    border: none;
+    box-sizing: border-box;
+}
+
+#mainListItemsRechtsSorteerBlock1Naam a,
+#mainListItemsRechtsSorteerBlock2Naam a,
+#mainListItemsRechtsSorteerBlock3Naam a
+{
+    text-decoration: none;
+    color: grey;
 }
 
 #mainListItemsRechtsSorteerBlock1NaamArrowUp
@@ -400,6 +397,8 @@ main
     width: 55%;
     color: black;
     text-align: left;
+    box-sizing: border-box;
+    padding: 2px;
 }
 
 .fa-long-arrow-alt-up
@@ -430,6 +429,8 @@ main
     width: 32.5%;
     color: black;
     text-align: left;
+    box-sizing: border-box;
+    padding: 2px;
 }
 
 
@@ -459,19 +460,17 @@ main
 
 
 
-#mainListItemsRechtsLijst
+.mainListItemsRechtsLijst
 {
-    width: 95%;
+    width: 100%;
     height: auto;
     border: solid darkgrey 0.5px;
     margin: 0px 0px 10px 0px;
     text-align: center;
     padding: 5px 0px 5px 0px;
 
+
 }
-
-
-
 
 #mainListItemsRechtsLijstBlock1,
 #mainListItemsRechtsLijstBlock2,
@@ -481,18 +480,22 @@ main
     width: 25%;
     height: auto;
     margin:0;
-
+    padding: 10px 0px 10px 0px;
 }
 
 #mainListItemsRechtsLijstFoto
 {
     width: 30%;
     height: auto;
+    box-sizing: border-box;
+    padding-top: 5px;
 }
 
 #mainListItemsRechtsLijstFoto img
 {
-   margin-top: 2px;
+
+    width: 35%;
+    height: 35%;
 }
 
 #mainListItemsRechtsLijstNaam
@@ -500,23 +503,23 @@ main
     width: 70%;
     height: auto;
     text-align: left;
-    font-size: 12px;
-    padding: 5px 0px 5px 0px;
+    font-size: 18px;
+    padding: 10px 0px 10px 0px;
 }
 
 #mainListItemsRechtsLijstEmail, #mainListItemsRechtsLijstRol
 {
     width: 100%;
     height: auto;
-    font-size: 12px;
-    padding: 5px 0px 5px 0px;
+    font-size: 18px;
+    padding: 10px 0px 10px 0px;
 }
 
 #mainListItemsRechtsLijstButtons1
 {
     width: 80%;
     height: auto;
-    padding: 5px 0px 5px 0px;
+    padding: 10px 0px 10px 0px;
     text-align: right;
 }
 
@@ -524,21 +527,13 @@ main
  {
     width: 20%;
     height: auto;
-    padding: 5px 0px 5px 0px;
+    padding: 10px 0px 10px 0px;
  }
 
 .fa-edit, .fa-times
 {
     height: auto;
     color: black;
-}
-
-
-
-
-.tableTabletEnMobiel
-{
-    display:none;
 }
 
 
@@ -573,6 +568,77 @@ main
 }
 
 
+/*---------------------------------------
+PAGINATION, DIVS EN OPMAAK
+-----------------------------------------*/
+
+.displayblocks{
+    display: block;
+    word-spacing: -6px;
+    width: 100%;
+}
+
+#pagination {
+    width: 100%;
+    height: auto;
+    word-spacing: normal;
+    text-align: center;
+    margin-top: 30px;
+    box-sizing: border-box;
+}
+
+/*#paginationInhoudPositie{*/
+    /*width: 100%;*/
+    /*height: auto;*/
+    /*text-align: center;*/
+/*}*/
+
+#paginationInhoud{
+    width: 100%;
+    height: auto;
+    font-size: 22px;
+}
+
+#afmetingenPijlLinks {
+    width: 5%;
+    height: auto;
+    margin-top: 2px;
+    color: black;
+}
+
+#afmetingenHuidigePagina{
+    width: 5%;
+    height: auto;
+    color: black;
+}
+
+#Afmetingpuntjes{
+    width: 5%;
+    height: auto;
+    color: black;
+}
+
+#afmetingenTotalePagina{
+    width: 5%;
+    height: auto;
+}
+
+#afmetingenTotalePagina a{
+    color: black;
+    text-decoration: none;
+}
+
+#afmetingenPijlRechts{
+    width: 5%;
+    height: auto;
+    margin-top: 2px;
+    color: black;
+}
+
+#afmetingenPijlRechts a{
+    color: black;
+}
+
 /*
 -------------------------------------------------------------------------
                         Footer divs en op
@@ -599,7 +665,7 @@ footer
 
     body
     {        
-        font-size: 110%;    
+        font-size: 110%;
     }
 
     #container
@@ -608,6 +674,15 @@ footer
         height: auto;
     }
 
+    #headerLogo h1
+    {
+        font-size: 200%;
+    }
+
+    main
+    {
+        word-spacing: -6px !important;
+    }
 
     #mainListItems
     {
@@ -615,26 +690,18 @@ footer
         height: auto;
     }
 
-    #mainListItemsLinks
+    #mainSearchBlock
     {
         display: none;
     }
 
-
-
-    .tableLaptop
+    #mainListItemsRechtsLijstFoto
     {
-        display: none;
+        width: 30%;
+        height: 30%;
+        padding-top: 10px;
+        box-sizing: border-box;
     }
-
-    .tableTabletEnMobiel
-    {
-        display: inline-block;
-
-        border-collapse: collapse;
-    }
-
-
 
     #mainListItemsRechtsSorteerBlock
     {
@@ -669,9 +736,34 @@ footer
         height: auto;
     }
 
-    #mainListItemsRechtsLijstFoto img
+    #mainListItemsRechtsLijstFoto
     {
-        margin-top: 10px;
+        display: none;
+    }
+
+    #mainListItemsRechtsLijstNaam
+    {
+        width: 100%;
+        box-sizing: border-box;
+        text-align: center;
+    }
+
+
+
+    #pagination {
+        width: 100%;
+        height: auto;
+        word-spacing: normal;
+        text-align: center;
+        margin-top: 30px;
+        box-sizing: border-box;
+
+    }
+
+
+    #afmetingenHuidigePagina span
+    {
+        color: black;
     }
 
     #headerButton
@@ -699,49 +791,75 @@ footer
     }
 
 
-
     #mainSideBarBlockPositie
     {
         width: 100%;
         height: auto;
-        text-align: center;
+        padding: 15px 30px 30px 30px;
+        box-sizing: border-box;
     }
 
     #mainSideBarBlockSorteer
     {
-        width: 50%;
+        width: 100%;
         height: auto;
         text-align: left;
         margin-bottom: 20px;
+        padding-left: 25px;
+        font-size: 20px;
     }
 
-    #mainSideBarBlockSorteer input
+    #mainSideBarBlockSorteer button
     {
+        width: 100%;
         background: none;
         border: none;
         color: white;
+        padding: 0px 0px 10px 0px;
+        text-align: left;
+        font-size: 20px;
     }
 
 
     #mainSideBarBlockZoeken
     {
-        width: 50%;
+        width: 100%;
         height: auto;
         margin-bottom: 30px;
         text-align: left;
+        padding-left: 25px;
+        font-size: 20px;
     }
 
     #mainSideBarBlockZoeken input
     {
-        width:100%;
+        width:80%;
+        font-size: 16px;
     }
 
     #mainSideBarBlockToevoegenEnUitloggen
     {
         width: 100%;
         height: auto;
-        margin-bottom: 10px;
-        margin-left: -40%;
+        margin: 20px 0px 10px 0px;
+        padding-left: 25px;
+
+    }
+
+    #mainSideBarBlockToevoegenEnUitloggen button
+    {
+        padding: 5px 5px 5px 5px;
+        background-color: white;
+        border: none;
+        margin-right: 3%;
+        margin-bottom: 40px;
+        font-size: 18px;
+    }
+
+    #mainSideBarBlockToevoegenEnUitloggen button a
+    {
+        text-decoration: none;
+        color: black;
     }
 
     .fa-plus-square,
@@ -775,10 +893,6 @@ footer
 */
 @media screen and (max-width: 480px)
 {
-    body
-	{
-        font-size: 100%;
-    }
 
     #container
     {
@@ -787,33 +901,34 @@ footer
 
     }
 
+
     #mainListItems
     {
         width: 60.15%;
         height: auto;
     }
 
-    #mainListItemsLinks
+    #mainListItemsRechtsLijstFoto
+    {
+        padding-top: 10px;
+        width: 30%;
+        height: 30%;
+    }
+
+
+    #mainSearchBlock
     {
         display: none;
     }
 
-    .tableLaptop
-    {
-        display: none;
-    }
+
 
     #mainListItemsRechtsSorteerBlock
     {
         display:none;
     }
 
-    .tableTabletEnMobiel
-    {
-        display: inline-block;
 
-
-    }
 
 
     #mainListItemsRechts
@@ -843,12 +958,8 @@ footer
         width: 33.3%;
         height: auto;
     }
-    #mainListItemsRechtsLijstFoto img
-    {
-        width: 50%;
-        height: 50%;
-        margin-top: 10px;
-    }
+
+
 
     #headerButton
     {
@@ -875,35 +986,23 @@ footer
     }
 
 
-    #mainSideBarBlockPositie
-    {
-        width: 100%;
-        height: auto;
-        text-align: center;
-    }
-
     #mainSideBarBlockSorteer
     {
-        width: 50%;
+        width: 80%;
         height: auto;
         text-align: left;
         margin-bottom: 20px;
-    }
 
-    #mainSideBarBlockSorteer input
-    {
-        background: none;
-        border: none;
-        color: white;
     }
 
 
     #mainSideBarBlockZoeken
     {
-        width: 50%;
+        width: 80%;
         height: auto;
         margin-bottom: 30px;
         text-align: left;
+
     }
 
     #mainSideBarBlockToevoegenEnUitloggen
@@ -911,7 +1010,7 @@ footer
         width: 100%;
         height: auto;
         margin-bottom: 10px;
-        margin-left: -40%;
+
     }
 
     .fa-plus-square,

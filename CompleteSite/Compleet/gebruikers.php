@@ -21,6 +21,7 @@ class Gebruikers extends DatabaseObject {
     public $Gebruikers_Telefoonnummer;
     public $Gebruikers_Gebruikersnaam;
     public $Gebruikers_Wachtwoord;
+    public $hashed_Wachtwoord;
     public $Gebruikers_Rol;
 
     public function full_name()
@@ -41,38 +42,50 @@ class Gebruikers extends DatabaseObject {
         }
     }
 
+    private function hashPassword($wachtwoord){
+        $this->hashed_Wachtwoord = hash('md2' , $wachtwoord);
+    }
+
     //weet of de gebruiker in de database zit.
     public static function authenticate($username="" , $password="")
     {
         global $database;
         $username = $database->escape_value($username);
-        $password = $database->escape_value($password);
 
-        $sql  = "SELECT * FROM gebruikers WHERE Gebruikers_Gebruikersnaam = '{$username}'
-                  AND Gebruikers_Wachtwoord = '{$password}' LIMIT 1";
+        $sql  = "SELECT * FROM gebruikers WHERE Gebruikers_Gebruikersnaam = '{$username}'";
         $result_array = self::find_by_sql($sql);
-        return !empty($result_array) ? array_shift($result_array) : false;
+
+        if($result_array[0]->Gebruikers_Wachtwoord == hash('md2' , $password)){
+            return !empty($result_array) ? array_shift($result_array) : false;
+        }else{
+            return false;
+        }
     }
 
     public function make($array){
 
         global $database;
-
-        if(!empty($array['tnaam'])){
-            $sql = "INSERT INTO ";
-            $sql .=  'gebruikers (Gebruikers_Voornaam, Gebruikers_Tussenvoegsel, Gebruikers_Achternaam, ';
-            $sql .= 'Gebruikers_Email, Gebruikers_Telefoonnummer, Gebruikers_Gebruikersnaam, Gebruikers_Wachtwoord, Gebruikers_Rol) ';
-            $sql .= 'VALUES ('. " '". $database->escape_value($array['vnaam']) . "' , ". " '". $database->escape_value($array['tnaam']) . "',".  " '". $database->escape_value($array['anaam']) . "' , ". " '". $database->escape_value($array['email']) . "' , ". " '". $database->escape_value($array['telnummer']) . "' ,";
-            $sql .=  " '". $database->escape_value($array['gnaam']) . "' , ". " '". $database->escape_value($array['wachtwoord']) . "' , "." '". $database->escape_value($array['rol']) ."' )";
-        } else{
-            $sql = "INSERT INTO ";
-            $sql .=  'gebruikers (Gebruikers_Voornaam, Gebruikers_Achternaam, ';
-            $sql .= 'Gebruikers_Email, Gebruikers_Telefoonnummer, Gebruikers_Gebruikersnaam, Gebruikers_Wachtwoord, Gebruikers_Rol) ';
-            $sql .= 'VALUES ('. " '". $database->escape_value($array['vnaam']) . "' , ". " '". $database->escape_value($array['anaam']) . "' , ". " '". $database->escape_value($array['email'])  . "' , ". " '". $database->escape_value($array['telnummer']) . "' ,";
-            $sql .=  " '". $database->escape_value($array['gnaam']) . "' , ". " '". $database->escape_value($array['wachtwoord']) . "' , "." '". $database->escape_value($array['rol']) ."' )";
+        $this->hashPassword($array['wachtwoord']);
+        if($this->doesUsernameExist($array['gnaam'])){
+            if(!empty($array['tnaam'])){
+                $sql = "INSERT INTO ";
+                $sql .=  'gebruikers (Gebruikers_Voornaam, Gebruikers_Tussenvoegsel, Gebruikers_Achternaam, ';
+                $sql .= 'Gebruikers_Email, Gebruikers_Telefoonnummer, Gebruikers_Gebruikersnaam, Gebruikers_Wachtwoord, Gebruikers_Rol) ';
+                $sql .= 'VALUES ('. " '". $database->escape_value($array['vnaam']) . "' , ". " '". $database->escape_value($array['tnaam']) . "',".  " '". $database->escape_value($array['anaam']) . "' , ". " '". $database->escape_value($array['email']) . "' , ". " '". $database->escape_value($array['telnummer']) . "' ,";
+                $sql .=  " '". $database->escape_value($array['gnaam']) . "' , ". " '". $this->hashed_Wachtwoord . "' , "." '". $database->escape_value($array['rol']) ."' )";
+            } else{
+                $sql = "INSERT INTO ";
+                $sql .=  'gebruikers (Gebruikers_Voornaam, Gebruikers_Achternaam, ';
+                $sql .= 'Gebruikers_Email, Gebruikers_Telefoonnummer, Gebruikers_Gebruikersnaam, Gebruikers_Wachtwoord, Gebruikers_Rol) ';
+                $sql .= 'VALUES ('. " '". $database->escape_value($array['vnaam']) . "' , ". " '". $database->escape_value($array['anaam']) . "' , ". " '". $database->escape_value($array['email'])  . "' , ". " '". $database->escape_value($array['telnummer']) . "' ,";
+                $sql .=  " '". $database->escape_value($array['gnaam']) . "' , ". " '". $this->hashed_Wachtwoord . "' , "." '". $database->escape_value($array['rol']) ."' )";
+            }
+            $database->query($sql);
+            return ($database->affected_rows() ==1) ? true : false;
+        }else{
+            echo 'Uw gebruikersnaam is al in gebruik';
+            return false;
         }
-        $database->query($sql);
-        return ($database->affected_rows() ==1) ? true : false;
     }
 
     public function edit($array){
@@ -93,6 +106,13 @@ class Gebruikers extends DatabaseObject {
 
         $database->query($sql);
         return ($database->affected_rows() ==1) ? true : false;
+    }
+
+    private function doesUsernameExist($gebruikersnaam){
+        $sql = "SELECT * FROM gebruikers WHERE Gebruikers_Gebruikersnaam = '{$gebruikersnaam}'";
+
+        $result_array = self::find_by_sql($sql);
+        return empty($result_array) ? true : false;
     }
 }
 ?>

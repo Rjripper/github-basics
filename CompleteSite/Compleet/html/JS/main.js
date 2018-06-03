@@ -16,7 +16,6 @@
 
    }
 
-
    var x = window.matchMedia("(max-width: 768px)");
    toggleSidebar(x);// Call listener function at run time
    x.addListener(toggleSidebar); // Attach listener function on state changes

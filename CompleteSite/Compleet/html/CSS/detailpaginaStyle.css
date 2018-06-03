@@ -1,7 +1,7 @@
 .container-inline-blocks
 {
   display: block;
-  word-spacing: -5px;
+  word-spacing: -6px;
 }
 
 .inline-blocks
@@ -45,6 +45,12 @@ header
     background: #313131;
 }
 
+#headerLogo h1
+{
+    margin-left: 2.5%;
+}
+
+
 #headerLogo
 {
     width: 100%;
@@ -73,31 +79,36 @@ main
     margin: auto;
 }
 
-#mainDetailArrow
+
+
+#LogoEnArrow
 {
-    width: 6%;
+    width: 100%;
     height: auto;
-    margin-top: 10px;
 }
-#mainDetailArrow i
+
+#Arrow
+{
+    width: 40%;
+    height: auto;
+    text-align: center;
+    margin-top: 8%;
+}
+
+#Image
+{
+    width: 60%;
+    height: auto;
+    text-align: left;
+}
+
+
+#Image img
 {
     max-width: 40%;
     max-height: 40%;
 }
 
-
-#mainDetailLogo
-{
-    width: 88%;
-    height: auto;
-    margin-left: -40px;
-}
-
-#mainDetailLogo img
-{
-    max-width: 40%;
-    max-height: 40%;
-}
 
 #mainDetailInfoText
 {
@@ -135,11 +146,17 @@ footer
 
     #container
     {
-        width: 100%;
+        width: 90%;
         height: auto;
        
     }
-    
+
+    #LogoEnArrow img
+    {
+        max-width: 40%;
+        max-height: 40%;
+
+    }
 }
 
 /*
@@ -149,7 +166,7 @@ footer
 {
     body
 	{
-        font-size: 120%;       
+        font-size: 80%;
 
     }
     
@@ -157,6 +174,13 @@ footer
     {
         width: 100%;
         height: auto;
+
+    }
+
+    #LogoEnArrow img
+    {
+        max-width: 40%;
+        max-height: 40%;
 
     }
 

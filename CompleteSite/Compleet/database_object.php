@@ -13,13 +13,33 @@ class DatabaseObject {
     protected static $table_name="gebruikers";
     protected static $db_fields = ["Gebruikers_ID", "Gebruikers_Voornaam", "Gebruikers_Tussenvoegsel", "Gebruikers_Achternaam", "Gebruikers_Email", "Gebruikers_Telefoonnummer", "Gebruikers_Gebruikersnaam", "Gebruikers_Wachtwoord", "Gebruikers_Rol"];
 
+    //Contacten
+    protected static $table_name_Contacts="contactpersoon";
+    protected static $db_fields_Contacts = ["Contactpersoon_ID",
+                                            "Contactpersoon_Voornaam",
+                                            "Contactpersoon_Tussenvoegsel",
+                                            "Contactpersoon_Achternaam",
+                                            "Contactpersoon_Email",
+                                            "Contactpersoon_Telefoonnummer_prive",
+                                            "Contactpersoon_Telefoonnummer_Zakelijk",
+                                            "Contactpersoon_Bedrijfsnaam",
+                                            "Contactpersoon_Standplaats"];
+
     public static function find_all(){
         return static::find_by_sql("SELECT * FROM ".static::$table_name);
     }
 
+    //Find by ID Gebruiker
     public static function find_by_id($id=0) {
         global $database;
         $result_array = static::find_by_sql("SELECT * FROM ".static::$table_name." WHERE Gebruikers_ID ={$database->escape_value($id)} LIMIT 1");
+        return !empty($result_array) ? array_shift($result_array) : false;
+    }
+
+    //Find by ID Contacten
+    public static function find_by_id_Contacts($id=0) {
+        global $database;
+        $result_array = static::find_by_sql("SELECT * FROM ".static::$table_name_Contacts." WHERE Contactpersoon_ID ={$database->escape_value($id)} LIMIT 1");
         return !empty($result_array) ? array_shift($result_array) : false;
     }
 
@@ -83,7 +103,6 @@ class DatabaseObject {
     }
 
     // UPDATE CREATE DELETE
-
     public function create(){
 
         global $database;
@@ -110,6 +129,7 @@ class DatabaseObject {
         }
     }
 
+    //UPDATE
     public function update(){
 
         global $database;
@@ -133,6 +153,7 @@ class DatabaseObject {
 
     }
 
+    //DELETE GEBRUIKER
     public function delete(){
         global $database;
 
@@ -141,4 +162,35 @@ class DatabaseObject {
 
         return ($database->affected_rows() == 1) ? true : false;
     }
+
+
+    //DELETE CONTACTEN
+    public function deleteContactpersoon(){
+        global $database;
+
+        $sql = "DELETE FROM ".static::$table_name_Contacts." WHERE Contactpersoon_ID = ". $database->escape_value($this->Contactpersoon_ID) . " LIMIT 1";
+        // echo $sql;
+        // die();
+        $database->query($sql);
+
+
+        return ($database->affected_rows() == 1) ? true : false;
+    }
+
+
+    //SORT
+    public function sort($colmnnaam)
+    {
+        $sql = "ORDER BY ";
+        $sql .= $colmnnaam;
+        $sql .= " ";
+        return $sql;
+    }
+
+    //ZOEK
+    public function zoek($colmnaam , $value){
+        $sql = "WHERE {$colmnaam[0]} LIKE '%{$value}%' OR {$colmnaam[1]} LIKE '%{$value}%' OR {$colmnaam[2]} LIKE '%{$value}%'";
+        return $sql;
+    }
+
 }

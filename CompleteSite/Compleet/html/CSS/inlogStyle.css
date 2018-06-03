@@ -18,7 +18,7 @@ body
     font-family: Cambria, Georgia, serif;
     line-height: 1.2em;
     font-size: 100%;
-    background: url(images/BackgroundImage.png);
+    background: url(../images/BackgroundImage.png);
 
 }
 
@@ -38,6 +38,7 @@ header
 header h1
 {
     color: white;
+    font-size: 50px;
 }
 
 main
@@ -56,7 +57,7 @@ main
 
 #mainForm input
 {
-    width: 15%;
+    width: 10%;
     -webkit-border-radius: 5px;
     -moz-border-radius: 5px;
     border-radius: 5px;
@@ -102,8 +103,14 @@ main
 
     #mainForm
     {
-        width: 120%;
+        width: 100%;
     }
+
+    #mainForm input
+    {
+        width: 35%;
+    }
+
 }
 
 /*
@@ -126,7 +133,12 @@ main
 
     #mainForm
     {
-        width: 120%;
+        width: 100%;
+    }
+
+    #mainForm input
+    {
+        width: 45%;
     }
 }
 
