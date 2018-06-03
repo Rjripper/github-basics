@@ -1,0 +1,345 @@
+.container-inline-blocks
+{
+  display: block;
+  word-spacing: -5px;
+}
+
+.inline-blocks
+{
+  display: inline-block;
+  word-spacing: normal;
+  vertical-align: top;
+}
+
+body 
+{
+    width: 100%;
+    height: 100%;
+    padding: 0px;
+    margin:0px;
+    font-family: Cambria, Georgia, serif;
+    line-height: 1.2em;
+    font-size: 100%;
+    overflow-x: hidden; 
+}
+
+/*
+    PC / Laptop 
+*/
+
+#container
+{
+    max-width:100%;
+    height:auto; 
+}
+
+/*
+    header, divs en opmaak
+*/
+
+header
+{
+    width: 100%;
+    height: auto;
+    background: #313131;
+}
+
+#headerLogo
+{
+    width: 50%;
+    height: auto;
+    color: white;
+}
+#headerButton
+{
+    width: 50%;
+    height: auto;  
+    display: none; 
+}
+.fa-align-justify
+{
+    color: white;    
+}
+
+
+
+/*
+    main, divs en opmaak
+*/
+
+main
+{
+    width: 100%;
+    height: auto;
+}
+
+#mainListItems
+{
+    width: 100%;
+    height: auto;    
+}
+
+#mainListItemsLinks
+{
+    width: 30%;
+    height: auto;
+}
+
+#mainListItemsLinks button
+{
+    width: 100%;
+    border: none;
+    background: none;
+    text-align: left;
+}
+
+
+#mainListItemsLinks td
+{
+    border: 1px solid black;
+    border-collapse: collapse;
+}
+
+#mainListItemsRechts
+{
+    width: 69.5%;
+    height: auto;
+}
+
+#mainListItemsLinks table
+{
+    border: 1px solid black;
+    border-collapse: collapse;
+}
+
+.tableOpmaakLosseButtons
+{
+    max-width: 268px;
+    width: 100%;
+    height: auto;
+}
+
+#mainListItemsLinks table td,tr,th
+{
+    border: 1px solid black;
+
+}
+
+#mainListItemsLinks img
+{
+    width: 15%;
+    heigt: 15%;
+}
+
+#mainListItemsRechts table
+{
+    height: auto;
+    border-collapse: collapse;
+}
+
+#mainListItemsLinks a
+{
+    display: block;
+    text-decoration: none;
+}
+
+.fa-power-off, .fa-plus
+{
+    margin-right: 10px;
+}
+
+.tableTabletEnMobiel
+{
+    display:none;
+}
+
+#mainListItems li
+{
+    list-style: none;
+    margin: 1px;
+}
+
+#mainSideBar
+{
+    width: 40%;
+    height: auto;
+    background: #313131;
+    display: none;
+    color: #f1f1f1;
+    font-size: 100%;
+    display: none;
+}
+
+
+#mainSideBar li
+{
+    list-style: none;
+    font-size: 100%;
+}
+
+#mainSideBar a
+{
+    text-decoration: none;
+    color: #f1f1f1;
+}
+/*
+    Footer, divs en opmaak
+*/
+footer
+{
+    width: 100%;
+    height: 62px;
+    background: #313131;    
+}
+
+
+
+/*
+    Tablet
+*/
+
+@media screen and (max-width:768px)
+{
+
+    body
+    {        
+        font-size: 110%;    
+    }
+
+    #container
+    {
+        width: 100%;
+        height: auto;
+       
+    }
+
+    #mainListItems
+    {
+        width: 60.15%;
+        height: auto;
+    }
+
+    #mainListItemsLinks
+    {
+        display: none;
+    }
+
+
+    .tableLaptop
+    {
+        display: none;
+    }
+
+    .tableTabletEnMobiel
+    {
+        display: inline-block;
+
+        border-collapse: collapse;
+    }
+
+    #mainListItemsRechts
+    {
+        width: 100%;
+        height: auto;
+        font-size: 80%;
+    }
+
+    #headerButton
+    {
+        display: inline-block;    
+        text-align: right;
+        margin-top: 25px;
+    }
+    
+    #mainSideBar
+    {
+        width: 40%;
+        display: inline-block;
+    }
+    
+    #mainSideBar h1
+    {
+        font-size: 110%;
+    }
+    #mainSideBar li
+    {
+        font-size: 100%;
+    }
+}
+
+/*
+    Mobiel
+*/
+@media screen and (max-width: 480px)
+{
+    body
+	{
+        font-size: 120%;       
+
+    }
+    
+    #container
+    {
+        width: 100%;
+        height: auto;
+
+    }
+
+    #mainListItems
+    {
+        width: 60.15%;
+        height: auto;
+    }
+
+    #mainListItemsLinks
+    {
+        display: none;
+    }
+
+    .tableLaptop
+    {
+        display: none;
+    }
+
+    .tableTabletEnMobiel
+    {
+        display: inline-block;
+
+
+    }
+
+
+    #mainListItemsRechts
+    {
+        width: 100%;
+        height: auto;
+        font-size: 70%;
+    }
+
+    #headerButton
+    {
+       text-align: right;
+       display: inline-block;   
+       margin-top: 25px; 
+    }
+
+    
+    #mainSideBar
+    {       
+        display: inline-block;
+        width: 40%;
+        right: -200px;
+
+    }
+
+    #mainSideBar h1
+    {
+        font-size: 110%;
+    }
+    #mainSideBar li
+    {
+        font-size: 100%;
+    }
+}
+
+
