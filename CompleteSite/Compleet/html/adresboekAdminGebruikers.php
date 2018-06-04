@@ -30,6 +30,10 @@ $pagination = new Pagination($page,$per_page, $total_count);
 
 $sql = "SELECT * FROM gebruikers ";
 
+if(!empty($_POST['zoeken'])){
+    $sql .= $gebruiker->zoek(gebruikersSortArray(), $_POST['zoeken']);
+}
+
 if(isset($_GET['order']) && !isset($_GET['change']))
 {
     $sql .= $gebruiker->sort($_GET['order']);
@@ -45,9 +49,6 @@ if(isset($_GET['order']) && !isset($_GET['change']))
     }
 }
 
-if(!empty($_POST['zoeken'])){
-    $sql .= $gebruiker->zoek(gebruikersSortArray(), $_POST['zoeken']);
-}
 $sql .= "LIMIT {$per_page} ";
 $sql .= "OFFSET {$pagination->offset()}";
 $gebruikers = Gebruikers::find_by_sql($sql);
@@ -230,10 +231,9 @@ $dezeGebruiker = Gebruikers::find_by_id($_SESSION['user_id']);
                     <div id="mainListItemsRechtsLijstBlock2" class="inline-blocks">
                             <div id="mainListItemsRechtsLijstEmail" class="inline-blocks">
                                 <a href="mailto:<?php echo $gebruiker->Gebruikers_Email; ?>
-                                    &body=%0D%0AMet%20Vriendelijke%20Groet,%0D%0A%0D%0A
-                                <?php echo $dezeGebruiker->Gebruikers_Gebruikersnaam; ?>
-                                    %0D%0AWerknemer%20bij%20Lidlpeople">
-                                    <?php echo $gebruiker->Gebruikers_Email; ?>
+                                    &body=%0D%0AMet%20Vriendelijke%20Groet,%0D%0A
+                                    <?php echo '%0D%0A' . $dezeGebruiker->Gebruikers_Gebruikersnaam; ?>%0D%0AWerknemer%20bij%20Lidlpeople"><?php echo $gebruiker->Gebruikers_Email; ?>
+
                                 </a>
                             </div>
                     </div>

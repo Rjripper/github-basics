@@ -189,7 +189,7 @@ class DatabaseObject {
 
     //ZOEK
     public function zoek($colmnaam , $value){
-        $sql = "WHERE {$colmnaam[0]} LIKE '%{$value}%' OR {$colmnaam[1]} LIKE '%{$value}%' OR {$colmnaam[2]} LIKE '%{$value}%'";
+        $sql = "WHERE {$colmnaam[0]} LIKE '%{$value}%' OR {$colmnaam[1]} LIKE '%{$value}%' OR {$colmnaam[2]} LIKE '%{$value}%' OR {$colmnaam[3]} LIKE '%{$value}%' ";
         return $sql;
     }
 
