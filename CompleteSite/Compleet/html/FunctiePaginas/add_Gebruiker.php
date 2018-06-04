@@ -45,31 +45,31 @@
                 <form action="" method="post">
 
                     <label for="vnaam"><b>Voornaam:</b></label>
-                    <input type="text" name="vnaam" value="<?php echo $gebruiker->Gebruikers_Voornaam; ?>"><br>
+                    <input type="text" name="vnaam"><br>
 
                     <label for="tnaam"><b>Tussenvoegsel:</b></label>
-                    <input type="text" name="tnaam" value="<?php echo $gebruiker->Gebruikers_Tussenvoegsel; ?>"><br>
+                    <input type="text" name="tnaam"><br>
 
                     <label for="anaam"><b>Achternaam:</b></label>
-                    <input type="text" name="anaam" value="<?php echo $gebruiker->Gebruikers_Achternaam; ?>"><br>
+                    <input type="text" name="anaam"><br>
 
                     <label for="email"><b>Email:</b></label>
-                    <input type="text" name="email" value="<?php echo $gebruiker->Gebruikers_Email; ?>"><br>
+                    <input type="text" name="email"><br>
 
                     <label for="telnummer"><b>Telefoonnummer:</b></label>
-                    <input type="text" name="telnummer" value="<?php echo $gebruiker->Gebruikers_Telefoonnummer; ?>"><br>
+                    <input type="text" name="telnummer"><br>
 
                     <label for="gnaam"><b>Gebruikersnaam:</b></label>
-                    <input type="text" name="gnaam" value="<?php echo $gebruiker->Gebruikers_Gebruikersnaam; ?>"><br>
+                    <input type="text" name="gnaam"><br>
 
                     <label for="wachtwoord"><b>Wachtwoord:</b></label>
-                    <input type="text" name="wachtwoord" value="<?php echo $gebruiker->Gebruikers_Wachtwoord; ?>"><br>
+                    <input type="text" name="wachtwoord"><br>
 
                     <label for="rol"><b>Rol:</b></label>
-                    <input type="text" name="rol" value="<?php echo $gebruiker->Gebruikers_Rol; ?>"><br>
+                    <input type="text" name="rol"><br>
 
                     <input type="submit" name="submit" value="Opslaan" class="buttonStyle">
-                    <input type="submit" name="back" value="Terug" class="buttonStyle">\
+                    <input type="submit" name="back" value="Terug" class="buttonStyle">
 
                 </form>
             </div>
