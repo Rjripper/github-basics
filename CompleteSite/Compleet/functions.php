@@ -24,11 +24,11 @@ function output_message($message=""){
 }
 
 function gebruikersSortArray(){
-    return ['Gebruikers_Achternaam', 'Gebruikers_Email' , 'Gebruikers_Rol'];
+    return ['Gebruikers_Achternaam', 'Gebruikers_Email' , 'Gebruikers_Rol', 'Gebruikers_Voornaam'];
 }
 
 function contactSortArray(){
-    return ['Contactpersoon_Achternaam', 'Contactpersoon_Bedrijfsnaam' , 'Contactpersoon_Standplaats'];
+    return ['Contactpersoon_Achternaam', 'Contactpersoon_Bedrijfsnaam' , 'Contactpersoon_Standplaats' , 'Contactpersoon_Voornaam'];
 }
 
 ?>

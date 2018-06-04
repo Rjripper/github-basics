@@ -25,6 +25,10 @@ $pagination = new Pagination($page,$per_page, $total_count);
 
 $sql = "SELECT * FROM contactpersoon ";
 
+if(!empty($_POST['zoeken'])){
+    $sql .= $contacten->zoek(contactSortArray(), $_POST['zoeken']);
+}
+
 if(isset($_GET['order']) && !isset($_GET['change']))
 {
     $sql .= $contacten->sort($_GET['order']);
@@ -40,9 +44,6 @@ if(isset($_GET['order']) && !isset($_GET['change']))
     }
 }
 
-if(!empty($_POST['zoeken'])){
-    $sql .= $contacten->zoek(contactSortArray(), $_POST['zoeken']);
-}
 
 $sql .= "LIMIT {$per_page} ";
 $sql .= "OFFSET {$pagination->offset()}";

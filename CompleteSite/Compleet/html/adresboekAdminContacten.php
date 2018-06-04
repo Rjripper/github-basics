@@ -29,6 +29,10 @@ $pagination = new Pagination($page,$per_page, $total_count);
 
 $sql = "SELECT * FROM contactpersoon ";
 
+if(!empty($_POST['zoeken'])){
+    $sql .= $contacten->zoek(contactSortArray(), $_POST['zoeken']);
+}
+
 if(isset($_GET['order']) && !isset($_GET['change']))
 {
     $sql .= $contacten->sort($_GET['order']);
@@ -44,9 +48,7 @@ if(isset($_GET['order']) && !isset($_GET['change']))
     }
 }
 
-if(!empty($_POST['zoeken'])){
-    $sql .= $contacten->zoek(contactSortArray(), $_POST['zoeken']);
-}
+
 
 $sql .= "LIMIT {$per_page} ";
 $sql .= "OFFSET {$pagination->offset()}";
@@ -170,7 +172,7 @@ $dezeGebruiker = Gebruikers::find_by_id($_SESSION['user_id']);
                                     <div class="container-inline-blocks" >
                                         <!--Naam -->
                                         <div id="mainListItemsRechtsSorteerBlock1Naam" class="inline-blocks" >
-                                            <button type="button" ><a href="adresboekAdminGebruikers.php?page=<?php echo $page ?>&order=<?php echo contactSortArray()[0]?>&sort=<?php echo $sort?>">Naam</a></button>
+                                            <button type="button" ><a href="?page=<?php echo $page ?>&order=<?php echo contactSortArray()[0]?>&sort=<?php echo $sort?>">Naam</a></button>
                                         </div>
 
                                         <div id="mainListItemsRechtsSorteerBlock1NaamArrowUp" class="inline-blocks">
@@ -184,7 +186,7 @@ $dezeGebruiker = Gebruikers::find_by_id($_SESSION['user_id']);
                                     <!--Standplaats -->
                                     <div class="container-inline-blocks" >
                                         <div id="mainListItemsRechtsSorteerBlock2Naam" class="inline-blocks">
-                                            <button type="button"><a href="adresboekAdminGebruikers.php?page=<?php echo $page ?>&order=<?php echo contactSortArray()[1]?>&sort=<?php echo $sort ?>">Standplaats</a></button>
+                                            <button type="button"><a href="adresboekAdminContacten.php?page=<?php echo $page ?>&order=<?php echo contactSortArray()[1]?>&sort=<?php echo $sort ?>">Standplaats</a></button>
                                         </div>
                                         <div id="mainListItemsRechtsSorteerBlock2NaamArrowUp" class="inline-blocks">
                                             <i class="fas fa-long-arrow-alt-up sorteer2"></i>
@@ -198,7 +200,7 @@ $dezeGebruiker = Gebruikers::find_by_id($_SESSION['user_id']);
                                     <!--Standplaats -->
                                     <div class="container-inline-blocks">
                                         <div id="mainListItemsRechtsSorteerBlock3Naam" class="inline-blocks">
-                                            <button type="button"><a href="adresboekAdminGebruikers.php?page=<?php echo $page ?>&order=<?php echo contactSortArray()[2]?>&sort=<?php echo $sort ?>">Bedrijfsnaam</a></button>
+                                            <button type="button"><a href="adresboekAdminContacten.php?page=<?php echo $page ?>&order=<?php echo contactSortArray()[2]?>&sort=<?php echo $sort ?>">Bedrijfsnaam</a></button>
                                         </div>
                                         <div id="mainListItemsRechtsSorteerBlock3NaamArrowUp" class="inline-blocks">
                                             <i class="fas fa-long-arrow-alt-up sorteer3"></i>
