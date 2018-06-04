@@ -15,11 +15,10 @@
     if(isset($_GET['id']))
     {
         $contact = Contacten::find_by_id_Contacts($_GET['id']);
+
     }
 
     if(isset($_POST['submit'])){
-
-        $contact = new Contacten();
 
         if($contact->edit($_POST)){
             redirect_to("../adresboekAdminContacten.php");
@@ -52,28 +51,28 @@
                 <!--FORM -->
                 <form action="" method="post">
                     <label for="vnaam"><b>Voornaam:</b></label>
-                    <input type="text" name="vnaam" value="<?php echo $gebruiker->Gebruikers_Voornaam; ?>"><br>
+                    <input type="text" name="vnaam" value="<?php echo $contact->Contactpersoon_Voornaam; ?>"><br>
 
                     <label for="tnaam"><b>Tussenvoegsel:</b></label>
-                    <input type="text" name="tnaam" value="<?php echo $gebruiker->Gebruikers_Tussenvoegsel; ?>"><br>
+                    <input type="text" name="tnaam" value="<?php echo $contact->Contactpersoon_Tussenvoegsel; ?>"><br>
 
                     <label for="anaam"><b>Achternaam:</b></label>
-                    <input type="text" name="anaam" value="<?php echo $gebruiker->Gebruikers_Achternaam; ?>"><br>
+                    <input type="text" name="anaam" value="<?php echo $contact->Contactpersoon_Achternaam; ?>"><br>
 
                     <label for="email"><b>Email:</b></label>
-                    <input type="text" name="email" value="<?php echo $gebruiker->Gebruikers_Email; ?>"><br>
+                    <input type="text" name="email" value="<?php echo $contact->Contactpersoon_Email; ?>"><br>
 
                     <label for="telnummer"><b>Telefoonnummer privé:</b></label>
-                    <input type="text" name="telnummerprive" value="<?php echo $contacten->Contactpersoon_Telefoonnummer_prive; ?>"><br>
+                    <input type="text" name="telnummerprive" value="<?php echo $contact->Contactpersoon_Telefoonnummer_prive; ?>"><br>
 
                     <label for="gnaam"><b>Telefoonnummer zakelijk:</b></label>
-                    <input type="text" name="telnummerzakelijk" value="<?php echo $contacten->Contactpersoon_Telefoonnummer_Zakelijk; ?>"><br>
+                    <input type="text" name="telnummerzakelijk" value="<?php echo $contact->Contactpersoon_Telefoonnummer_Zakelijk; ?>"><br>
 
                     <label for="wachtwoord"><b>Bedrijfsnaam:</b></label>
-                    <input type="text" name="bedrijfsnaam" value="<?php echo $contacten->Contactpersoon_Bedrijfsnaam; ?>"><br>
+                    <input type="text" name="bedrijfsnaam" value="<?php echo $contact->Contactpersoon_Bedrijfsnaam; ?>"><br>
 
                     <label for="rol"><b>Standplaats:</b></label>
-                    <input type="text" name="standplaats" value="<?php echo $contacten->Contactpersoon_Standplaats; ?>"><br>
+                    <input type="text" name="standplaats" value="<?php echo $contact->Contactpersoon_Standplaats; ?>"><br>
 
                     <input type="submit" name="submit" value="Opslaan" class="buttonStyle">
                     <input type="submit" name="back" value="Terug" class="buttonStyle">

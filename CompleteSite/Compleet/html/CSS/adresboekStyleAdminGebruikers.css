@@ -607,10 +607,15 @@ PAGINATION, DIVS EN OPMAAK
     font-size: 22px;
 }
 
+#paginationInhoud a{
+    color: black;
+    text-decoration: none;
+}
+
+/* alleen margin-top is verwijderd */
 #afmetingenPijlLinks {
     width: 5%;
     height: auto;
-    margin-top: 2px;
     color: black;
 }
 
@@ -631,22 +636,12 @@ PAGINATION, DIVS EN OPMAAK
     height: auto;
 }
 
-#afmetingenTotalePagina a{
-    color: black;
-    text-decoration: none;
-}
-
+/* alleen margin-top is verwijderd */
 #afmetingenPijlRechts{
     width: 5%;
     height: auto;
-    margin-top: 2px;
     color: black;
 }
-
-#afmetingenPijlRechts a{
-    color: black;
-}
-
 
 /*
 -------------------------------------------------------------------------
