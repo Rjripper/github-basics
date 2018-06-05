@@ -39,11 +39,24 @@ require_once ("../initialize.php");
                 <div id="mainDetailInfoText" class="inline-blocks">
 
 
-                    <li>Volledige naam:
+                    <li>Voornaam:
                         <?php
-                            echo $contact->full_name();
+                            echo $contact->Contactpersoon_Voornaam;
                         ?>
                     </li>
+
+                    <li>Tussenvoegsel:
+                        <?php
+                            echo $contact->Contactpersoon_Tussenvoegsel;
+                        ?>
+                    </li>
+
+                    <li>Achternaam:
+                        <?php
+                            echo $contact->Contactpersoon_Achternaam;
+                        ?>
+                    </li>
+
 
 
                     <li>E-mail:
@@ -52,13 +65,13 @@ require_once ("../initialize.php");
                         ?>
                     </li>
 
-                    <li>Privé:
+                    <li>Tel. Privé:
                         <?php
                         echo $contact->Contactpersoon_Telefoonnummer_prive;
                         ?>
                     </li>
 
-                    <li>Zakelijk:
+                    <li>Tel. Zakelijk:
                         <?php
                         echo $contact->Contactpersoon_Telefoonnummer_Zakelijk;
                         ?>
@@ -81,8 +94,8 @@ require_once ("../initialize.php");
             </div>
         </main>
 
-    <footer class="inline-blocks">
-
+    <footer class="container-inline-blocks">
+       <p>  &#9400;  LidlPeople <?php echo date("Y", time()); ?></p>
     </footer>
 </div>
 </body>

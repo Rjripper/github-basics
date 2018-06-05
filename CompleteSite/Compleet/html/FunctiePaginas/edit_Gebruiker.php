@@ -86,8 +86,8 @@
 
     </main>
 
-    <footer class="inline-blocks">
-
+    <footer class="container-inline-blocks">
+        <p>  &#9400;  LidlPeople <?php echo date("Y", time()); ?></p>
     </footer>
 </div>
 

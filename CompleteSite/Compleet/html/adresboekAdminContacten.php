@@ -227,6 +227,7 @@ $dezeGebruiker = Gebruikers::find_by_id($_SESSION['user_id']);
                                         </div>
                                         <div id="mainListItemsRechtsLijstNaam" class="inline-blocks">
                                             <?php echo $contact->full_name();?>
+                                            <a href="detailpaginaAdminContacten.php?id=<?php echo $contact->Contactpersoon_ID?>"><span></span></a>
                                         </div>
                                     </div>
 
@@ -412,8 +413,8 @@ $dezeGebruiker = Gebruikers::find_by_id($_SESSION['user_id']);
     </div>
 </main>
 
-    <footer class="inline-blocks">
-
+    <footer class="container-inline-blocks">
+        <p>  &#9400;  LidlPeople <?php echo date("Y", time()); ?></p>
     </footer>
 </div>
 

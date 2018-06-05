@@ -10,14 +10,16 @@
   word-spacing: normal;
   vertical-align: top;
 }
-
-body 
-{
+html,body {
     width: 100%;
     height: 100%;
+}
+body 
+{
+    
     padding: 0px;
     margin:0px;
-    font-family: Cambria, Georgia, serif;
+    font-family: Arial, serif;
     line-height: 1.2em;
     font-size: 100%;
     overflow-x: hidden; 
@@ -31,7 +33,8 @@ body
 #container
 {
     max-width:100%;
-    height:auto; 
+    min-height: 100%;
+
 }
 
 /*
@@ -41,13 +44,15 @@ body
 header
 {
     width: 100%;
-    height: auto;
+    height: 10vh;
     background: #313131;
 }
 
 #headerLogo h1
 {
     margin-left: 2.5%;
+    font-size: 40px;
+    box-sizing: border-box;
 }
 
 
@@ -66,14 +71,16 @@ header
 main
 {
     width: 100%;
-    height: auto;
-    margin: 20px 0px 20px 0px;
+    height: 80vh;
     text-align: center;
+    box-sizing: border-box;
+    padding-top: 30px;
+
 }
 
 #mainDetail
 {
-    width: 40%;
+    width: 30%;
     height: auto;
     border:1px solid black;    
     margin: auto;
@@ -85,14 +92,15 @@ main
 {
     width: 100%;
     height: auto;
+    margin-top: 45px;
 }
 
 #Arrow
 {
     width: 40%;
     height: auto;
-    text-align: center;
-    margin-top: 8%;
+    box-sizing: border-box;
+    padding-right: 80px;
 }
 
 #Image
@@ -100,6 +108,7 @@ main
     width: 60%;
     height: auto;
     text-align: left;
+    margin-top: 3%;
 }
 
 
@@ -114,23 +123,45 @@ main
 {
     width: 100%;
     height: auto;
+    margin: 40px 0px 20px 0px;
+
 }
 
 #mainDetailInfoText li
 {
     list-style: none;
+    font-size: 180%;
+    line-height: 130%;
 }
 
+i
+{
+    font-size: 250%;
+}
+
+a
+{
+    color: black;
+}
 /*
     Footer, divs en opmaak
 */
 footer
 {
     width: 100%;
-    height: 62px;
-    background: #313131;    
-}
+    height: 10vh;
+    background: #313131;  
 
+}
+ footer p {
+    color: white;
+    text-align: center;
+    height: 100%;
+    margin: 0;
+    word-spacing: normal;
+    box-sizing: border-box;
+    padding-top: 28px;
+ }
 
 /*
     Tablet
@@ -139,24 +170,27 @@ footer
 @media screen and (max-width:768px)
 {
 
-    body
-    {        
-        font-size: 110%;    
-    }
 
-    #container
-    {
-        width: 90%;
-        height: auto;
-       
-    }
-
+   
     #LogoEnArrow img
     {
         max-width: 40%;
         max-height: 40%;
 
     }
+
+    #mainDetail 
+    {
+        width: 60%;
+        font-size: 80%;
+    }
+
+    main
+    {
+    padding-top: 50px;
+    }
+
+
 }
 
 /*
@@ -164,24 +198,29 @@ footer
 */
 @media screen and (max-width: 480px)
 {
-    body
-	{
-        font-size: 80%;
-
-    }
-    
-    #container
-    {
-        width: 100%;
-        height: auto;
-
-    }
 
     #LogoEnArrow img
     {
         max-width: 40%;
         max-height: 40%;
 
+    }
+
+    #mainDetail
+    {
+        width: 60%;
+        font-size: 75%;
+    }
+
+    #Arrow 
+    {
+        padding-right: 40px;
+
+    }
+
+    main
+    {
+        padding-top: 80px;
     }
 
 }
