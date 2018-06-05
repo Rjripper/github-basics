@@ -78,8 +78,9 @@ class Contacten extends DatabaseObject
         $sql .=  'Contactpersoon_Standplaats = '." '". $database->escape_value($array['standplaats']) . "' ";
         $sql .=  'WHERE Contactpersoon_ID = '." '". $this->Contactpersoon_ID. "'";
 
+
         $database->query($sql);
-        return ($database->affected_rows() ==1) ? true : false;
+        return ($database->affected_rows() >= 0 ) ? true : false;
     }
 
 
