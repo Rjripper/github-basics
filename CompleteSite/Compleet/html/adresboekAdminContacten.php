@@ -4,7 +4,6 @@ $contacten = new Contacten();
 
 $message = "";
 $sort = " ASC ";
-$order = " Contactpersoon_ID ";
 
 if(!$session->is_logged_in())
 {
@@ -22,7 +21,7 @@ if(!$session->is_logged_in())
 <?php
 
 $page = !empty($_GET['page']) ? (int)$_GET['page'] : 1;
-$per_page = 1;
+$per_page = 20;
 $total_count = Contacten::count_all();
 
 $pagination = new Pagination($page,$per_page, $total_count);
@@ -176,7 +175,16 @@ $dezeGebruiker = Gebruikers::find_by_id($_SESSION['user_id']);
                                         </div>
 
                                         <div id="mainListItemsRechtsSorteerBlock1NaamArrowUp" class="inline-blocks">
-                                            <i class="fas fa-long-arrow-alt-up sorteer1"></i>
+
+                                            <?php
+                                                if($sort == 'ASC' && $_GET['order'] == contactSortArray()[0])
+                                                {
+                                                    echo '<i class="fas fa-long-arrow-alt-down sorteer1"></i>';
+                                                }else{
+                                                    echo '<i class="fas fa-long-arrow-alt-up sorteer1"></i>';
+                                                }
+                                            ?>
+
                                         </div>
 
                                     </div>
@@ -189,7 +197,14 @@ $dezeGebruiker = Gebruikers::find_by_id($_SESSION['user_id']);
                                             <button type="button"><a href="adresboekAdminContacten.php?page=<?php echo $page ?>&order=<?php echo contactSortArray()[1]?>&sort=<?php echo $sort ?>">Standplaats</a></button>
                                         </div>
                                         <div id="mainListItemsRechtsSorteerBlock2NaamArrowUp" class="inline-blocks">
-                                            <i class="fas fa-long-arrow-alt-up sorteer2"></i>
+                                            <?php
+                                            if($sort == 'ASC' && $_GET['order'] == contactSortArray()[1])
+                                            {
+                                                echo '<i class="fas fa-long-arrow-alt-down sorteer2"></i>';
+                                            }else{
+                                                echo '<i class="fas fa-long-arrow-alt-up sorteer2"></i>';
+                                            }
+                                            ?>
                                         </div>
 
                                     </div>
@@ -203,7 +218,14 @@ $dezeGebruiker = Gebruikers::find_by_id($_SESSION['user_id']);
                                             <button type="button"><a href="adresboekAdminContacten.php?page=<?php echo $page ?>&order=<?php echo contactSortArray()[2]?>&sort=<?php echo $sort ?>">Bedrijfsnaam</a></button>
                                         </div>
                                         <div id="mainListItemsRechtsSorteerBlock3NaamArrowUp" class="inline-blocks">
-                                            <i class="fas fa-long-arrow-alt-up sorteer3"></i>
+                                            <?php
+                                            if($sort == 'ASC' && $_GET['order'] == contactSortArray()[2])
+                                            {
+                                                echo '<i class="fas fa-long-arrow-alt-down sorteer3"></i>';
+                                            }else{
+                                                echo '<i class="fas fa-long-arrow-alt-up sorteer3"></i>';
+                                            }
+                                            ?>
                                         </div>
                                     </div>
 

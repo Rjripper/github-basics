@@ -105,7 +105,7 @@ class Gebruikers extends DatabaseObject {
         $sql .=  'WHERE gebruikers_ID = '." '". $this->Gebruikers_ID. "'";
 
         $database->query($sql);
-        return ($database->affected_rows() ==1) ? true : false;
+        return ($database->affected_rows() >=0) ? true : false;
     }
 
     private function doesUsernameExist($gebruikersnaam){

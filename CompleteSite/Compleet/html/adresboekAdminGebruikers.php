@@ -23,7 +23,7 @@ if(!$session->is_logged_in())
 <?php
 
 $page = !empty($_GET['page']) ? (int)$_GET['page'] : 1;
-$per_page = 1;
+$per_page = 20;
 $total_count = Gebruikers::count_all();
 
 $pagination = new Pagination($page,$per_page, $total_count);
@@ -171,7 +171,14 @@ $dezeGebruiker = Gebruikers::find_by_id($_SESSION['user_id']);
                             </div>
 
                             <div id="mainListItemsRechtsSorteerBlock1NaamArrowUp" class="inline-blocks">
-                                <i class="fas fa-long-arrow-alt-up sorteer1"></i>
+                                <?php
+                                if($sort == 'ASC' && $_GET['order'] == gebruikersSortArray()[0])
+                                {
+                                    echo '<i class="fas fa-long-arrow-alt-down sorteer1"></i>';
+                                }else{
+                                    echo '<i class="fas fa-long-arrow-alt-up sorteer1"></i>';
+                                }
+                                ?>
                             </div>
 
                         </div>
@@ -184,7 +191,14 @@ $dezeGebruiker = Gebruikers::find_by_id($_SESSION['user_id']);
                                 <button type="button"><a href="adresboekAdminGebruikers.php?page=<?php echo $page ?>&order=<?php echo gebruikersSortArray()[1]?>&sort=<?php echo $sort ?>">E-mail</a></button>
                             </div>
                             <div id="mainListItemsRechtsSorteerBlock2NaamArrowUp" class="inline-blocks">
-                                <i class="fas fa-long-arrow-alt-up sorteer2"></i>
+                                <?php
+                                if($sort == 'ASC' && $_GET['order'] == gebruikersSortArray()[1])
+                                {
+                                    echo '<i class="fas fa-long-arrow-alt-down sorteer2"></i>';
+                                }else{
+                                    echo '<i class="fas fa-long-arrow-alt-up sorteer2"></i>';
+                                }
+                                ?>
                             </div>
 
                         </div>
@@ -198,7 +212,14 @@ $dezeGebruiker = Gebruikers::find_by_id($_SESSION['user_id']);
                                 <button type="button"><a href="adresboekAdminGebruikers.php?page=<?php echo $page ?>&order=<?php echo gebruikersSortArray()[2]?>&sort=<?php echo $sort ?>">Rol</a></button>
                             </div>
                             <div id="mainListItemsRechtsSorteerBlock3NaamArrowUp" class="inline-blocks">
-                                <i class="fas fa-long-arrow-alt-up sorteer3"></i>
+                                <?php
+                                if($sort == 'ASC' && $_GET['order'] == gebruikersSortArray()[2])
+                                {
+                                    echo '<i class="fas fa-long-arrow-alt-down sorteer3"></i>';
+                                }else{
+                                    echo '<i class="fas fa-long-arrow-alt-up sorteer3"></i>';
+                                }
+                                ?>
                             </div>
                         </div>
 

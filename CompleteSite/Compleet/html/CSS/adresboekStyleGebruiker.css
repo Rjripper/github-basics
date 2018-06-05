@@ -638,22 +638,20 @@ PAGINATION, DIVS EN OPMAAK
     box-sizing: border-box;
 }
 
-/*#paginationInhoudPositie{*/
-/*width: 100%;*/
-/*height: auto;*/
-/*text-align: center;*/
-/*}*/
-
 #paginationInhoud{
     width: 100%;
     height: auto;
     font-size: 22px;
 }
 
+#paginationInhoud a{
+    color: black;
+    text-decoration: none;
+}
+
 #afmetingenPijlLinks {
     width: 5%;
     height: auto;
-    margin-top: 2px;
     color: black;
 }
 
@@ -682,7 +680,6 @@ PAGINATION, DIVS EN OPMAAK
 #afmetingenPijlRechts{
     width: 5%;
     height: auto;
-    margin-top: 2px;
     color: black;
 }
 

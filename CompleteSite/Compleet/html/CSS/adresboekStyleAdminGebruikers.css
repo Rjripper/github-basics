@@ -103,7 +103,13 @@ header
 }
 #headerButtonsPaginaButton a
 {
+    color: black;
     text-decoration: none;
+}
+
+#headerButtonsPaginaButton button:hover
+{
+    background-color: grey;
 }
 
 #headerButton
@@ -594,12 +600,6 @@ PAGINATION, DIVS EN OPMAAK
     margin-top: 30px;
     box-sizing: border-box;
 }
-
-/*#paginationInhoudPositie{*/
-/*width: 100%;*/
-/*height: auto;*/
-/*text-align: center;*/
-/*}*/
 
 #paginationInhoud{
     width: 100%;

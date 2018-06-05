@@ -28,7 +28,7 @@ require_once ("../initialize.php");
             <div id="mainDetail" class="container-inline-blocks">
                 <div id="LogoEnArrow" class="container-inline-blocks">
                     <div id="Arrow" class="inline-blocks">
-                        <a href="adresboekGebruikerContacten.php" >
+                        <a href="adresboekAdminContacten.php" >
                         <i class="fas fa-arrow-left"></i>
                         </a>
                     </div>

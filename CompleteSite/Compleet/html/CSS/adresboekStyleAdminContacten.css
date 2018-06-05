@@ -103,7 +103,13 @@ header
 }
 #headerButtonsPaginaButton a
 {
+    color: black;
     text-decoration: none;
+}
+
+#headerButtonsPaginaButton button:hover
+{
+    background-color: grey;
 }
 
 #headerButton

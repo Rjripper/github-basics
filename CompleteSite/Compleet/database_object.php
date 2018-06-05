@@ -169,8 +169,8 @@ class DatabaseObject {
         global $database;
 
         $sql = "DELETE FROM ".static::$table_name_Contacts." WHERE Contactpersoon_ID = ". $database->escape_value($this->Contactpersoon_ID) . " LIMIT 1";
-        // echo $sql;
-        // die();
+//         echo $sql;
+//         die();
         $database->query($sql);
 
 
