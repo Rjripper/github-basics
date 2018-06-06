@@ -90,8 +90,8 @@ require_once ("../initialize.php");
                 </li>
 
                 <li>
-                    <a href="FunctiePaginas/edit_Gebruiker.php?id=<?php echo  $gebruiker->Gebruikers_ID; ?>"><i class="fas fa-edit"></i></a>
-                    <a href="FunctiePaginas/delete_Gebruiker.php?id=<?php echo $gebruiker->Gebruikers_ID; ?>"><i class="fas fa-times"></i></a>
+                    <a href="FunctiePaginas/edit_Contact.php?id=<?php echo  $contact->Contactpersoon_ID; ?>"><i class="fas fa-edit"></i></a>
+                    <a href="FunctiePaginas/delete_Contact.php?id=<?php echo $contact->Contactpersoon_ID; ?>"><i class="fas fa-times"></i></a>
                 </li>
 
 

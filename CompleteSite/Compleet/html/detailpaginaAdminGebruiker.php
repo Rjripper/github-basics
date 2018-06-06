@@ -14,7 +14,7 @@ require_once ("../initialize.php");
     <?php
     if(isset($_GET['id']))
     {
-        $contact = Contacten::find_by_id_Contacts($_GET['id']);
+        $gebruiker = Gebruikers::find_by_id($_GET['id']);
     }
 
     ?>
@@ -41,19 +41,19 @@ require_once ("../initialize.php");
 
                 <li>Voornaam:
                     <?php
-                    echo $contact->Contactpersoon_Voornaam;
+                    echo $gebruiker->Gebruikers_Voornaam;
                     ?>
                 </li>
 
                 <li>Tussenvoegsel:
                     <?php
-                    echo $contact->Contactpersoon_Tussenvoegsel;
+                    echo $gebruiker->Gebruikers_Tussenvoegsel;
                     ?>
                 </li>
 
                 <li>Achternaam:
                     <?php
-                    echo $contact->Contactpersoon_Achternaam;
+                    echo $gebruiker->Gebruikers_Achternaam;
                     ?>
                 </li>
 
@@ -61,31 +61,25 @@ require_once ("../initialize.php");
 
                 <li>E-mail:
                     <?php
-                    echo $contact->Contactpersoon_Email;
+                    echo $gebruiker->Gebruikers_Email;
                     ?>
                 </li>
 
-                <li>Tel. Privé:
+                <li>Tel. nummer:
                     <?php
-                    echo $contact->Contactpersoon_Telefoonnummer_prive;
+                    echo $gebruiker->Gebruikers_Telefoonnummer;
                     ?>
                 </li>
 
-                <li>Tel. Zakelijk:
+                <li>Gebruikersnaam:
                     <?php
-                    echo $contact->Contactpersoon_Telefoonnummer_Zakelijk;
+                    echo $gebruiker->Gebruikers_Gebruikersnaam;
                     ?>
                 </li>
 
-                <li>Bedrijfsnaam:
+                <li>Rol:
                     <?php
-                    echo $contact->Contactpersoon_Bedrijfsnaam;
-                    ?>
-                </li>
-
-                <li>Standplaats:
-                    <?php
-                    echo $contact->Contactpersoon_Standplaats;
+                    echo $gebruiker->Gebruikers_Rol;
                     ?>
                 </li>
 
