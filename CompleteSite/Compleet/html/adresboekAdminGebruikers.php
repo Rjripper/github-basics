@@ -243,6 +243,7 @@ $dezeGebruiker = Gebruikers::find_by_id($_SESSION['user_id']);
                             </div>
                             <div id="mainListItemsRechtsLijstNaam" class="inline-blocks">
                                 <?php echo $gebruiker->full_name();?>
+                                <a href="detailpaginaAdminGebruiker.php?id=<?php echo  $gebruiker->Gebruikers_ID?>"><span></span></a>
                             </div>
                         </div>
 

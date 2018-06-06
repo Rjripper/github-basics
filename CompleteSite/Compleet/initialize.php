@@ -23,10 +23,10 @@ defined('DS') ? null : define('DS', DIRECTORY_SEPARATOR);
 
 /*FF NAAR JE EIGEN AANPASSEN*/
 defined('SITE_ROOT') ? null : define('SITE_ROOT',
-    'E:'.DS.'xampp'.DS.'htdocs');
+    'C:'.DS.'xampp'.DS.'htdocs'.DS.'php');
 
 /*FF NAAR HET LAATSTE MAPJE ZETTEN*/
-defined('LIB_PATH') ? null : define('LIB_PATH', SITE_ROOT.DS.'Scrum');
+defined('LIB_PATH') ? null : define('LIB_PATH', SITE_ROOT.DS.'PHPSkrum');
 
 //CORE OBJECT
 require_once (LIB_PATH.DS.'database.php');
